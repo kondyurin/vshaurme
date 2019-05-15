@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-15 18:29+0300\n"
-"PO-Revision-Date: 2019-05-15 18:32+0300\n"
+"POT-Creation-Date: 2019-05-15 18:57+0300\n"
+"PO-Revision-Date: 2019-05-15 18:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -29,7 +29,31 @@ msgstr "Изучить"
 
 #: vshaurme/templates/base.html:108
 msgid "Capture and share every wonderful moment."
-msgstr "Запечатлеть и поделиться каждым чудесным моментом"
+msgstr "Запечатлеть и поделиться каждым чудесным моментом."
+
+#: vshaurme/templates/auth/login.html:14
+msgid "Log in to Vshaurme"
+msgstr "Авторизоваться во Vshaurme"
+
+#: vshaurme/templates/auth/login.html:18
+msgid "Register new account"
+msgstr "Зарегестрировать новый аккаунт"
+
+#: vshaurme/templates/auth/login.html:19
+msgid "Forget password"
+msgstr "Забыли пароль?"
+
+#: vshaurme/templates/auth/register.html:14
+msgid "Welcome to Vshaurme!"
+msgstr "Добро пожаловать во Vshaurme!"
+
+#: vshaurme/templates/auth/register.html:18
+msgid "Already have an account? "
+msgstr "Аккаунт уже есть?"
+
+#: vshaurme/templates/auth/register.html:18
+msgid "Click here to log in."
+msgstr "Кликните, чтобы авторизоваться"
 
 #: vshaurme/templates/main/index.html:96
 msgid "Capture and remember every wonderful moment."

@@ -166,6 +166,8 @@ def register_commands(app):
         """Update all languages."""
         if os.system('pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .'):
             raise RuntimeError('extract command failed')
+        if os.system('pybabel update -i messages.pot -d vshaurme/translations'):
+            raise RuntimeError('extract command failed')
         click.echo('Done.')
 
     @app.cli.command()
