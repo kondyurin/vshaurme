@@ -160,3 +160,23 @@ def register_commands(app):
         click.echo('Generating %d comments...' % comment)
         fake_comment(comment)
         click.echo('Done.')
+
+    @app.cli.command()
+    def updatelang():
+        """Update all languages."""
+        if os.system('pybabel extract -F babel.cfg -k lazy_gettext -o messages.pot .'):
+            raise RuntimeError('extract command failed')
+        click.echo('Done.')
+
+    @app.cli.command()
+    @click.option('--lang', default='ru', help='Language to translate')
+    def createlang(lang):
+        if os.system(f'pybabel init -i messages.pot -d vshaurme/translations -l {lang}'):
+            raise RuntimeError('extract command failed')
+        click.echo('Done.')
+
+    @app.cli.command()
+    def compilelang():
+        if os.system('pybabel compile -d vshaurme/translations'):
+            raise RuntimeError('extract command failed')
+        click.echo('Done.')

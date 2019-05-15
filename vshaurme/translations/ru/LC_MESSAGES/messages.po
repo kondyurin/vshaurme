@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-15 17:16+0300\n"
-"PO-Revision-Date: 2019-05-15 17:23+0300\n"
+"POT-Creation-Date: 2019-05-15 18:29+0300\n"
+"PO-Revision-Date: 2019-05-15 18:32+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -29,7 +29,7 @@ msgstr "Изучить"
 
 #: vshaurme/templates/base.html:108
 msgid "Capture and share every wonderful moment."
-msgstr "Запечатлеть и поделиться каждым чудесным моментом."
+msgstr "Запечатлеть и поделиться каждым чудесным моментом"
 
 #: vshaurme/templates/main/index.html:96
 msgid "Capture and remember every wonderful moment."
@@ -37,5 +37,5 @@ msgstr "Запечатлеть и поделиться каждым чудесн
 
 #: vshaurme/templates/main/index.html:97
 msgid "Join us"
-msgstr "Присоединяйся к нам!"
+msgstr "Присоединиться к нам!"
 
