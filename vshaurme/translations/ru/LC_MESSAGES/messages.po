@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-15 18:57+0300\n"
+"POT-Creation-Date: 2019-05-15 23:03+0300\n"
 "PO-Revision-Date: 2019-05-15 18:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -18,6 +18,98 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
+#: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:38
+#: vshaurme/forms/auth.py:43
+msgid "Email"
+msgstr ""
+
+#: vshaurme/forms/admin.py:12
+msgid "Role"
+msgstr ""
+
+#: vshaurme/forms/admin.py:13
+msgid "Active"
+msgstr ""
+
+#: vshaurme/forms/admin.py:14
+msgid "Confirmed"
+msgstr ""
+
+#: vshaurme/forms/admin.py:25 vshaurme/forms/auth.py:34
+#: vshaurme/forms/user.py:23
+msgid "The username is already in use."
+msgstr ""
+
+#: vshaurme/forms/admin.py:29 vshaurme/forms/auth.py:30
+msgid "The email is already in use."
+msgstr ""
+
+#: vshaurme/forms/auth.py:12 vshaurme/forms/auth.py:23
+#: vshaurme/forms/auth.py:44
+msgid "Password"
+msgstr ""
+
+#: vshaurme/forms/auth.py:13
+msgid "Remember me"
+msgstr ""
+
+#: vshaurme/forms/auth.py:14
+msgid "Log in"
+msgstr ""
+
+#: vshaurme/forms/auth.py:18 vshaurme/forms/user.py:12
+msgid "Name"
+msgstr ""
+
+#: vshaurme/forms/auth.py:20 vshaurme/forms/user.py:13
+msgid "Username"
+msgstr ""
+
+#: vshaurme/forms/auth.py:22 vshaurme/forms/user.py:15
+msgid "The username should contain only a-z, A-Z and 0-9."
+msgstr ""
+
+#: vshaurme/forms/auth.py:24 vshaurme/forms/auth.py:45
+msgid "password2"
+msgstr ""
+
+#: vshaurme/forms/auth.py:25 vshaurme/forms/auth.py:46
+msgid "Confirm password"
+msgstr ""
+
+#: vshaurme/forms/main.py:7
+msgid "Description"
+msgstr ""
+
+#: vshaurme/forms/main.py:12
+msgid "Add Tag (use space to separate)"
+msgstr ""
+
+#: vshaurme/forms/user.py:16
+msgid "Website"
+msgstr ""
+
+#: vshaurme/forms/user.py:17
+msgid "City"
+msgstr ""
+
+#: vshaurme/forms/user.py:18
+msgid "Bio"
+msgstr ""
+
+#: vshaurme/forms/user.py:27
+msgid "Upload"
+msgstr ""
+
+#: vshaurme/forms/user.py:29
+msgid "The file format should be .jpg or .png."
+msgstr ""
+
+#: vshaurme/forms/user.py:39
+msgid "Crop and Update"
+msgstr ""
 
 #: vshaurme/templates/base.html:33
 msgid "Home"
