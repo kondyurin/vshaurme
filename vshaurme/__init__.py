@@ -14,14 +14,22 @@ from vshaurme.extensions import bootstrap, db, login_manager, mail, dropzone, mo
 from vshaurme.models import Role, User, Photo, Tag, Follow, Notification, Comment, Collect, Permission
 from vshaurme.settings import config
 
+from flask_babel import Babel
+from flask import request
+
 
 def create_app(config_name=None):
     if config_name is None:
         config_name = os.getenv('FLASK_CONFIG', 'development')
 
     app = Flask('vshaurme')
-    
+    babel = Babel(app)
+
     app.config.from_object(config[config_name])
+
+    @babel.localeselector
+    def get_locale():
+        return request.accept_languages.best_match(['en', 'ru'])
 
     register_extensions(app)
     register_blueprints(app)
