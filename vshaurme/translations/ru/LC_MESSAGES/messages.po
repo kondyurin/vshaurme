@@ -7,69 +7,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-16 08:55+0300\n"
-"PO-Revision-Date: 2019-05-15 18:51+0300\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2019-05-16 11:55+0300\n"
+"PO-Revision-Date: 2019-05-16 12:01+0300\n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
 #: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:38
 #: vshaurme/forms/auth.py:43
 msgid "Email"
-msgstr ""
+msgstr "Почта"
 
 #: vshaurme/forms/admin.py:12
 msgid "Role"
-msgstr ""
+msgstr "Роль"
 
 #: vshaurme/forms/admin.py:13
 msgid "Active"
-msgstr ""
+msgstr "Активность"
 
 #: vshaurme/forms/admin.py:14
 msgid "Confirmed"
-msgstr ""
+msgstr "Подтвержденный"
 
 #: vshaurme/forms/admin.py:25 vshaurme/forms/auth.py:34
 #: vshaurme/forms/user.py:23
 msgid "The username is already in use."
-msgstr ""
+msgstr "Имя пользователя уже используется"
 
 #: vshaurme/forms/admin.py:29 vshaurme/forms/auth.py:30
 msgid "The email is already in use."
-msgstr ""
+msgstr "Почта уже используется"
 
 #: vshaurme/forms/auth.py:12 vshaurme/forms/auth.py:23
 #: vshaurme/forms/auth.py:44
 msgid "Password"
-msgstr ""
+msgstr "Пароль"
 
 #: vshaurme/forms/auth.py:13
 msgid "Remember me"
-msgstr ""
+msgstr "Напомнить мне"
 
 #: vshaurme/forms/auth.py:14
 msgid "Log in"
-msgstr ""
+msgstr "Авторизоваться"
 
 #: vshaurme/forms/auth.py:18 vshaurme/forms/user.py:12
 msgid "Name"
-msgstr ""
+msgstr "Имя"
 
 #: vshaurme/forms/auth.py:20 vshaurme/forms/user.py:13
 msgid "Username"
-msgstr ""
+msgstr "Имя пользователя"
 
 #: vshaurme/forms/auth.py:22 vshaurme/forms/user.py:15
 msgid "The username should contain only a-z, A-Z and 0-9."
 msgstr ""
+"Имя пользователя должно. Содержать только  буквы a-z, A-Z и цифры 0-9."
 
 #: vshaurme/forms/auth.py:24 vshaurme/forms/auth.py:45
 msgid "password2"
@@ -77,39 +79,39 @@ msgstr ""
 
 #: vshaurme/forms/auth.py:25 vshaurme/forms/auth.py:46
 msgid "Confirm password"
-msgstr ""
+msgstr "Подтвердить пароль"
 
 #: vshaurme/forms/main.py:7
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 #: vshaurme/forms/main.py:12
 msgid "Add Tag (use space to separate)"
-msgstr ""
+msgstr "Добавить тэг (используйте пробелы для разделения тэгов)"
 
 #: vshaurme/forms/user.py:16
 msgid "Website"
-msgstr ""
+msgstr "Вебсайт"
 
 #: vshaurme/forms/user.py:17
 msgid "City"
-msgstr ""
+msgstr "Город"
 
 #: vshaurme/forms/user.py:18
 msgid "Bio"
-msgstr ""
+msgstr "Био"
 
 #: vshaurme/forms/user.py:27
 msgid "Upload"
-msgstr ""
+msgstr "Загрузить"
 
 #: vshaurme/forms/user.py:29
 msgid "The file format should be .jpg or .png."
-msgstr ""
+msgstr "Изображение должно быть .jpg или .png."
 
 #: vshaurme/forms/user.py:39
 msgid "Crop and Update"
-msgstr ""
+msgstr "Обрезать и обновить"
 
 #: vshaurme/templates/base.html:33
 msgid "Home"
@@ -123,6 +125,10 @@ msgstr "Изучить"
 msgid "Capture and share every wonderful moment."
 msgstr "Запечатлеть и поделиться каждым чудесным моментом."
 
+#: vshaurme/templates/auth/login.html:4
+msgid "Login"
+msgstr "Авторизоваться"
+
 #: vshaurme/templates/auth/login.html:14
 msgid "Log in to Vshaurme"
 msgstr "Авторизоваться во Vshaurme"
@@ -134,6 +140,10 @@ msgstr "Зарегестрировать новый аккаунт"
 #: vshaurme/templates/auth/login.html:19
 msgid "Forget password"
 msgstr "Забыли пароль?"
+
+#: vshaurme/templates/auth/register.html:4
+msgid "Register"
+msgstr "Регистрация"
 
 #: vshaurme/templates/auth/register.html:14
 msgid "Welcome to Vshaurme!"
@@ -147,6 +157,39 @@ msgstr "Аккаунт уже есть?"
 msgid "Click here to log in."
 msgstr "Кликните, чтобы авторизоваться"
 
+#: vshaurme/templates/auth/reset_password.html:4
+#: vshaurme/templates/auth/reset_password.html:8
+msgid "Password Reset"
+msgstr "Сброс пароля"
+
+#: vshaurme/templates/emails/change_email.html:1
+#: vshaurme/templates/emails/confirm.html:1
+#: vshaurme/templates/emails/reset_password.html:1
+msgid "Hello"
+msgstr "Привет"
+
+#: vshaurme/templates/emails/change_email.html:2
+msgid "Please visit the link below to verify your new email address:"
+msgstr "Пожалуйста, пройдите по ссылке, чтобы подтвердить адрес почты"
+
+#: vshaurme/templates/emails/change_email.html:5
+#: vshaurme/templates/emails/confirm.html:6
+#: vshaurme/templates/emails/reset_password.html:5
+msgid "Please do not reply to this notification, this inbox is not monitored."
+msgstr "Пожалуйста, не отвечайте на это сообщение, адрес не проверяется."
+
+#: vshaurme/templates/emails/confirm.html:2
+msgid "Welcome to"
+msgstr "Добро пожаловать в"
+
+#: vshaurme/templates/emails/confirm.html:3
+msgid "Please visit the link below to verify your email address:"
+msgstr "Пожалуйста, пройдите по ссылке, чтобы подтвердить адрес почты"
+
+#: vshaurme/templates/emails/reset_password.html:2
+msgid "Here is your password reset link:"
+msgstr "Это ваша ссылка для сброса пароля"
+
 #: vshaurme/templates/main/index.html:96
 msgid "Capture and remember every wonderful moment."
 msgstr "Запечатлеть и поделиться каждым чудесным моментом."
@@ -154,4 +197,3 @@ msgstr "Запечатлеть и поделиться каждым чудесн
 #: vshaurme/templates/main/index.html:97
 msgid "Join us"
 msgstr "Присоединиться к нам!"
-
