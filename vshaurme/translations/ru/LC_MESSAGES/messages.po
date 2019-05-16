@@ -7,8 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-16 11:55+0300\n"
-"PO-Revision-Date: 2019-05-16 12:01+0300\n"
+"POT-Creation-Date: 2019-05-16 12:13+0300\n"
+"PO-Revision-Date: 2019-05-16 12:15+0300\n"
+"Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
@@ -17,7 +18,6 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
-"Last-Translator: \n"
 "X-Generator: Poedit 2.2.1\n"
 
 #: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
@@ -70,8 +70,7 @@ msgstr "Имя пользователя"
 
 #: vshaurme/forms/auth.py:22 vshaurme/forms/user.py:15
 msgid "The username should contain only a-z, A-Z and 0-9."
-msgstr ""
-"Имя пользователя должно. Содержать только  буквы a-z, A-Z и цифры 0-9."
+msgstr "Имя пользователя должно. Содержать только  буквы a-z, A-Z и цифры 0-9."
 
 #: vshaurme/forms/auth.py:24 vshaurme/forms/auth.py:45
 msgid "password2"
@@ -189,6 +188,36 @@ msgstr "Пожалуйста, пройдите по ссылке, чтобы п�
 #: vshaurme/templates/emails/reset_password.html:2
 msgid "Here is your password reset link:"
 msgstr "Это ваша ссылка для сброса пароля"
+
+#: vshaurme/templates/errors/400.html:3 vshaurme/templates/errors/400.html:10
+#: vshaurme/templates/errors/403.html:3 vshaurme/templates/errors/403.html:10
+#: vshaurme/templates/errors/404.html:3 vshaurme/templates/errors/404.html:10
+#: vshaurme/templates/errors/413.html:3 vshaurme/templates/errors/413.html:10
+#: vshaurme/templates/errors/500.html:3 vshaurme/templates/errors/500.html:10
+msgid "Error"
+msgstr "Ошибка"
+
+#: vshaurme/templates/errors/400.html:15 vshaurme/templates/errors/403.html:15
+#: vshaurme/templates/errors/404.html:15 vshaurme/templates/errors/413.html:15
+#: vshaurme/templates/errors/500.html:15
+msgid "Return Home"
+msgstr "Вернуться на главную"
+
+#: vshaurme/templates/errors/403.html:11
+msgid "Forbidden"
+msgstr "Запрещено"
+
+#: vshaurme/templates/errors/404.html:11
+msgid "Page Not Found"
+msgstr "Страница не найдена"
+
+#: vshaurme/templates/errors/413.html:11
+msgid "Request Entity Too Large"
+msgstr "Запрос слишком большой"
+
+#: vshaurme/templates/errors/500.html:11
+msgid "Internal Server Error"
+msgstr "Ошибка сервера"
 
 #: vshaurme/templates/main/index.html:96
 msgid "Capture and remember every wonderful moment."
