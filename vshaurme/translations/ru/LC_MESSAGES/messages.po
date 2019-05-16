@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-16 08:55+0300\n"
+"POT-Creation-Date: 2019-05-16 22:14+0300\n"
 "PO-Revision-Date: 2019-05-15 18:51+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -18,6 +18,30 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+
+#: vshaurme/settings.py:68
+msgid "Drop files here to upload"
+msgstr "Перетащите файл сюда для загрузки"
+
+#: vshaurme/settings.py:69
+msgid "You can't upload files of this type."
+msgstr "Вы не можете загрузить фал этого типа"
+
+#: vshaurme/settings.py:70
+msgid "File is too big {{filesize}}. Max filesize: {{maxFilesize}}MiB."
+msgstr "Файл слишком большой {{filesize}}. Максимальный размер файла: {{maxFilesize}}MiB."
+
+#: vshaurme/settings.py:71
+msgid "Server error: {{statusCode}}"
+msgstr "Ошибка сервера: {{statusCode}}"
+
+#: vshaurme/settings.py:72
+msgid "Your browser does not support drag'n'drop file uploads."
+msgstr "Ваш браузер слишком старый для этого де**ма"
+
+#: vshaurme/settings.py:73
+msgid "Your can't upload any more files."
+msgstr "Вы не можете загрузить больше файлов"
 
 #: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
 #: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:38
