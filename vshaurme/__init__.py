@@ -10,12 +10,13 @@ from vshaurme.blueprints.ajax import ajax_bp
 from vshaurme.blueprints.auth import auth_bp
 from vshaurme.blueprints.main import main_bp
 from vshaurme.blueprints.user import user_bp
-from vshaurme.extensions import bootstrap, db, login_manager, mail, dropzone, moment, whooshee, avatars, csrf
+from vshaurme.extensions import bootstrap, db, login_manager, mail, dropzone,\
+                                moment, whooshee, avatars, csrf, babel
 from vshaurme.models import Role, User, Photo, Tag, Follow, Notification, Comment, Collect, Permission
 from vshaurme.settings import config
 
-from flask_babel import Babel
-from flask import request
+
+
 
 
 def create_app(config_name=None):
@@ -46,11 +47,10 @@ def register_extensions(app):
     whooshee.init_app(app)
     avatars.init_app(app)
     csrf.init_app(app)
-
-    babel = Babel(app)
-    @babel.localeselector
-    def get_locale():
-        return request.accept_languages.best_match(['en', 'ru'])
+    babel.init_app(app)
+    # @babel.localeselector
+    # def get_locale():
+    #     return request.accept_languages.best_match(['en', 'ru'])
 
 
 def register_blueprints(app):
