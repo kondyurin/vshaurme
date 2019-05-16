@@ -23,13 +23,8 @@ def create_app(config_name=None):
         config_name = os.getenv('FLASK_CONFIG', 'development')
 
     app = Flask('vshaurme')
-    babel = Babel(app)
 
     app.config.from_object(config[config_name])
-
-    @babel.localeselector
-    def get_locale():
-        return request.accept_languages.best_match(['en', 'ru'])
 
     register_extensions(app)
     register_blueprints(app)
@@ -51,6 +46,11 @@ def register_extensions(app):
     whooshee.init_app(app)
     avatars.init_app(app)
     csrf.init_app(app)
+
+    babel = Babel(app)
+    @babel.localeselector
+    def get_locale():
+        return request.accept_languages.best_match(['en', 'ru'])
 
 
 def register_blueprints(app):
