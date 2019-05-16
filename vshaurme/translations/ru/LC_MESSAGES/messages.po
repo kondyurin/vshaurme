@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-16 12:13+0300\n"
-"PO-Revision-Date: 2019-05-16 12:15+0300\n"
+"POT-Creation-Date: 2019-05-16 12:34+0300\n"
+"PO-Revision-Date: 2019-05-16 12:37+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -112,11 +112,12 @@ msgstr "Изображение должно быть .jpg или .png."
 msgid "Crop and Update"
 msgstr "Обрезать и обновить"
 
-#: vshaurme/templates/base.html:33
+#: vshaurme/templates/base.html:33 vshaurme/templates/main/index.html:5
 msgid "Home"
 msgstr "Домой"
 
-#: vshaurme/templates/base.html:34
+#: vshaurme/templates/base.html:34 vshaurme/templates/main/explore.html:4
+#: vshaurme/templates/main/index.html:77
 msgid "Explore"
 msgstr "Изучить"
 
@@ -125,6 +126,7 @@ msgid "Capture and share every wonderful moment."
 msgstr "Запечатлеть и поделиться каждым чудесным моментом."
 
 #: vshaurme/templates/auth/login.html:4
+#: vshaurme/templates/main/_comment.html:121
 msgid "Login"
 msgstr "Авторизоваться"
 
@@ -141,6 +143,7 @@ msgid "Forget password"
 msgstr "Забыли пароль?"
 
 #: vshaurme/templates/auth/register.html:4
+#: vshaurme/templates/main/_comment.html:123
 msgid "Register"
 msgstr "Регистрация"
 
@@ -219,6 +222,115 @@ msgstr "Запрос слишком большой"
 msgid "Internal Server Error"
 msgstr "Ошибка сервера"
 
+#: vshaurme/templates/main/_comment.html:2
+msgid "Comments"
+msgstr "Комментарии"
+
+#: vshaurme/templates/main/_comment.html:4
+msgid "latest"
+msgstr "Последние"
+
+#: vshaurme/templates/main/_comment.html:10
+msgid "comment"
+msgstr "Комментировать"
+
+#: vshaurme/templates/main/_comment.html:52
+msgid "Reply"
+msgstr "Ответить"
+
+#: vshaurme/templates/main/_comment.html:59
+msgid "Delete"
+msgstr "Удалить"
+
+#: vshaurme/templates/main/_comment.html:67
+msgid "Report"
+msgstr "Пожаловаться"
+
+#: vshaurme/templates/main/_comment.html:91
+msgid "No comments."
+msgstr "Нет комментариев"
+
+#: vshaurme/templates/main/_comment.html:100
+#: vshaurme/templates/main/_photo_sidebar.html:49
+#: vshaurme/templates/main/_photo_sidebar.html:75
+msgid "Cancel"
+msgstr "Отмена"
+
+#: vshaurme/templates/main/_comment.html:116
+msgid "No permission."
+msgstr "Не разрешено"
+
+#: vshaurme/templates/main/_comment.html:122
+msgid "or"
+msgstr "или"
+
+#: vshaurme/templates/main/_comment.html:123
+msgid "to leave a comment."
+msgstr "чтобы оставить комментарий"
+
+#: vshaurme/templates/main/_comment.html:128
+msgid "Comment disabled."
+msgstr "Комментирование отключено"
+
+#: vshaurme/templates/main/_photo_sidebar.html:6
+msgid "Previous"
+msgstr "Предыдущие"
+
+#: vshaurme/templates/main/_photo_sidebar.html:9
+msgid "Next"
+msgstr "Следующие"
+
+#: vshaurme/templates/main/_photo_sidebar.html:39
+msgid "edit description"
+msgstr "Редактировать описание"
+
+#: vshaurme/templates/main/_photo_sidebar.html:83
+msgid "Delete tag"
+msgstr "Удалить тэг"
+
+#: vshaurme/templates/main/_photo_sidebar.html:98
+msgid "Uncollect"
+msgstr "Убрать из коллекции"
+
+#: vshaurme/templates/main/_photo_sidebar.html:106
+#: vshaurme/templates/main/_photo_sidebar.html:114
+#: vshaurme/templates/main/index.html:56 vshaurme/templates/main/index.html:63
+msgid "Collect"
+msgstr "Собрать"
+
+#: vshaurme/templates/main/_photo_sidebar.html:120
+msgid "collectors"
+msgstr "Коллекционеры"
+
+#: vshaurme/templates/main/_sidebar.html:16
+msgid "My Photos"
+msgstr "Мои фото"
+
+#: vshaurme/templates/main/_sidebar.html:19
+msgid "My Collections"
+msgstr "Мои коллекции"
+
+#: vshaurme/templates/main/_sidebar.html:24
+msgid "Hot Tags"
+msgstr "Горячие тэги"
+
+#: vshaurme/templates/main/collectors.html:5
+#: vshaurme/templates/main/collectors.html:19
+msgid "Collectors"
+msgstr "Коллекционеры"
+
+#: vshaurme/templates/main/collectors.html:12
+msgid "Return"
+msgstr "Вернуться"
+
+#: vshaurme/templates/main/explore.html:16
+msgid "Change"
+msgstr "Изменить"
+
+#: vshaurme/templates/main/index.html:76
+msgid "No trends."
+msgstr "Нет трендов"
+
 #: vshaurme/templates/main/index.html:96
 msgid "Capture and remember every wonderful moment."
 msgstr "Запечатлеть и поделиться каждым чудесным моментом."
@@ -226,3 +338,32 @@ msgstr "Запечатлеть и поделиться каждым чудесн
 #: vshaurme/templates/main/index.html:97
 msgid "Join us"
 msgstr "Присоединиться к нам!"
+
+#: vshaurme/templates/main/notifications.html:4
+#: vshaurme/templates/main/notifications.html:8
+msgid "Notifications"
+msgstr "Уведомления"
+
+#: vshaurme/templates/main/notifications.html:15
+msgid "All"
+msgstr "Все"
+
+#: vshaurme/templates/main/notifications.html:19
+msgid "Unread"
+msgstr "Непрочитанные"
+
+#: vshaurme/templates/main/notifications.html:25
+msgid "unread notifications"
+msgstr "Непрочитанные уведомления"
+
+#: vshaurme/templates/main/notifications.html:28
+msgid "Settings"
+msgstr "Настройки "
+
+#: vshaurme/templates/main/notifications.html:33
+msgid "Read all"
+msgstr "Прочитать все"
+
+#: vshaurme/templates/main/notifications.html:65
+msgid "No notifications."
+msgstr "Нет уведомлений"
