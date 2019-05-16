@@ -61,6 +61,8 @@ class BaseConfig:
 
     WHOOSHEE_MIN_STRING_LEN = 1
 
+    LANGUAGES = ['en', 'ru']
+
 
 class DevelopmentConfig(BaseConfig):
     SQLALCHEMY_DATABASE_URI = \
