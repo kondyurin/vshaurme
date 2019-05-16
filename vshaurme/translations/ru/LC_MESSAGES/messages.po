@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-16 12:34+0300\n"
-"PO-Revision-Date: 2019-05-16 12:37+0300\n"
+"POT-Creation-Date: 2019-05-16 13:07+0300\n"
+"PO-Revision-Date: 2019-05-16 13:10+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
@@ -100,7 +100,8 @@ msgstr "Город"
 msgid "Bio"
 msgstr "Био"
 
-#: vshaurme/forms/user.py:27
+#: vshaurme/forms/user.py:27 vshaurme/templates/main/upload.html:3
+#: vshaurme/templates/main/upload.html:13
 msgid "Upload"
 msgstr "Загрузить"
 
@@ -239,10 +240,13 @@ msgid "Reply"
 msgstr "Ответить"
 
 #: vshaurme/templates/main/_comment.html:59
+#: vshaurme/templates/main/photo.html:18 vshaurme/templates/main/photo.html:70
+#: vshaurme/templates/main/tag.html:15
 msgid "Delete"
 msgstr "Удалить"
 
 #: vshaurme/templates/main/_comment.html:67
+#: vshaurme/templates/main/photo.html:23
 msgid "Report"
 msgstr "Пожаловаться"
 
@@ -253,6 +257,7 @@ msgstr "Нет комментариев"
 #: vshaurme/templates/main/_comment.html:100
 #: vshaurme/templates/main/_photo_sidebar.html:49
 #: vshaurme/templates/main/_photo_sidebar.html:75
+#: vshaurme/templates/main/photo.html:69
 msgid "Cancel"
 msgstr "Отмена"
 
@@ -367,3 +372,96 @@ msgstr "Прочитать все"
 #: vshaurme/templates/main/notifications.html:65
 msgid "No notifications."
 msgstr "Нет уведомлений"
+
+#: vshaurme/templates/main/photo.html:5
+msgid "'s Photo"
+msgstr " Фото"
+
+#: vshaurme/templates/main/photo.html:15
+msgid "Share"
+msgstr "Поделиться"
+
+#: vshaurme/templates/main/photo.html:27
+msgid "Upload at"
+msgstr "Загрузить в"
+
+#: vshaurme/templates/main/photo.html:41 vshaurme/templates/main/photo.html:60
+msgid "Close"
+msgstr "Закрыть"
+
+#: vshaurme/templates/main/photo.html:59
+msgid "Delete Confirm"
+msgstr "Удалит подтверждение"
+
+#: vshaurme/templates/main/photo.html:64
+msgid "Are you sure you want to delete this item?"
+msgstr "Вы уверены, что хотите удалить?"
+
+#: vshaurme/templates/main/profile_popup.html:9
+msgid "Follow each other"
+msgstr "Подписаться друг на kheuf"
+
+#: vshaurme/templates/main/profile_popup.html:11
+msgid "Follows you"
+msgstr "Подписались на вас"
+
+#: vshaurme/templates/main/profile_popup.html:19
+msgid "Photos"
+msgstr "Фото"
+
+#: vshaurme/templates/main/profile_popup.html:25
+msgid "Followers"
+msgstr "Подписчики"
+
+#: vshaurme/templates/main/profile_popup.html:28
+msgid "Homepage"
+msgstr "Домашняя страница"
+
+#: vshaurme/templates/main/profile_popup.html:34
+msgid "Unfollow"
+msgstr "Отписаться"
+
+#: vshaurme/templates/main/profile_popup.html:39
+#: vshaurme/templates/main/profile_popup.html:46
+msgid "Follow"
+msgstr "Подписаться"
+
+#: vshaurme/templates/main/search.html:5 vshaurme/templates/main/search.html:9
+msgid "Search:"
+msgstr "Искать:"
+
+#: vshaurme/templates/main/search.html:15
+msgid "Photo"
+msgstr "Фото"
+
+#: vshaurme/templates/main/search.html:17
+msgid "User"
+msgstr "Пользователь"
+
+#: vshaurme/templates/main/search.html:19
+msgid "Tag"
+msgstr "Тэг"
+
+#: vshaurme/templates/main/search.html:38
+msgid "No results."
+msgstr "Нет результатов."
+
+#: vshaurme/templates/main/tag.html:11
+msgid "photos"
+msgstr "фотографии"
+
+#: vshaurme/templates/main/tag.html:21
+msgid "Order by"
+msgstr "Сортировать по"
+
+#: vshaurme/templates/main/tag.html:25
+msgid "Order by Time"
+msgstr "Сортировать по времени"
+
+#: vshaurme/templates/main/tag.html:27
+msgid "Order by Collects"
+msgstr ""
+
+#: vshaurme/templates/main/upload.html:19
+msgid "Done"
+msgstr ""
