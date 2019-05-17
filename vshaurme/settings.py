@@ -1,6 +1,8 @@
 import os
 import sys
 
+from flask_babel import lazy_gettext as _l
+
 basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 # SQLite URI compatible
@@ -60,6 +62,16 @@ class BaseConfig:
     DROPZONE_ENABLE_CSRF = True
 
     WHOOSHEE_MIN_STRING_LEN = 1
+
+    LANGUAGES = ['en', 'ru']
+
+    DROPZONE_DEFAULT_MESSAGE = _l("Drop files here to upload")
+    DROPZONE_INVALID_FILE_TYPE = _l("You can't upload files of this type.")
+    DROPZONE_FILE_TOO_BIG = _l("File is too big {{filesize}}. Max filesize: {{maxFilesize}}MiB.")
+    DROPZONE_SERVER_ERROR = _l("Server error: {{statusCode}}")
+    DROPZONE_BROWSER_UNSUPPORTED = _l("Your browser does not support drag'n'drop file uploads.")
+    DROPZONE_MAX_FILE_EXCEED = _l("Your can't upload any more files.")
+
 
 
 class DevelopmentConfig(BaseConfig):

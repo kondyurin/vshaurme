@@ -113,3 +113,5 @@ uploads/avatars/*
 !uploads/avatars/.gitkeep
 
 whooshee
+.vscode/
+.DS_Store
