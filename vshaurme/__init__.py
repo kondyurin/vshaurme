@@ -47,18 +47,11 @@ def register_extensions(app):
     whooshee.init_app(app)
     avatars.init_app(app)
     csrf.init_app(app)
-<<<<<<< HEAD
-# this is a test changing
-    babel = Babel(app)
-    @babel.localeselector
-    def get_locale():
-        return request.accept_languages.best_match(['en', 'ru'])
-=======
+
     babel.init_app(app)
     # @babel.localeselector
     # def get_locale():
     #     return request.accept_languages.best_match(['en', 'ru'])
->>>>>>> 77bfdbeefb9ca824b598df5e067077e68de06517
 
 
 def register_blueprints(app):
