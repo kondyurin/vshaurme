@@ -1,13 +1,13 @@
 {% extends 'admin/index.html' %}
 {% from 'bootstrap/pagination.html' import render_pagination %}
 
-{% block title %}Manage Tags{% endblock %}
+{% block title %}{{ _('Manage Tags') }}{% endblock %}
 
 {% block content %}
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-            {{ render_breadcrumb_item('admin.index', 'Dashboard Home') }}
-            {{ render_breadcrumb_item('admin.manage_tag', 'Manage Tag') }}
+            {{ render_breadcrumb_item('admin.index', _('Dashboard Home')) }}
+            {{ render_breadcrumb_item('admin.manage_tag', _('Manage Tag')) }}
         </ol>
     </nav>
     <div class="page-header">
@@ -20,9 +20,9 @@
             <thead>
             <tr>
                 <th>No.</th>
-                <th>Name</th>
-                <th>Photos</th>
-                <th>Actions</th>
+                <th>{{ _('Name') }}</th>
+                <th>{{ _('Photos') }}</th>
+                <th>{{ _('Actions') }}</th>
             </tr>
             </thead>
             {% for tag in tags %}
@@ -42,6 +42,6 @@
         </table>
         <div class="page-footer">{{ render_pagination(pagination) }}</div>
     {% else %}
-        <div class="tip"><h5>No tags.</h5></div>
+        <div class="tip"><h5>{{ _('No tags.') }}</h5></div>
     {% endif %}
 {% endblock %}
