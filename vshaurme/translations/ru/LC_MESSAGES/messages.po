@@ -20,6 +20,30 @@ msgstr ""
 "Generated-By: Babel 2.6.0\n"
 "X-Generator: Poedit 2.2.1\n"
 
+#: vshaurme/settings.py:68
+msgid "Drop files here to upload"
+msgstr "Перетащите файл сюда для загрузки"
+
+#: vshaurme/settings.py:69
+msgid "You can't upload files of this type."
+msgstr "Вы не можете загрузить фал этого типа"
+
+#: vshaurme/settings.py:70
+msgid "File is too big {{filesize}}. Max filesize: {{maxFilesize}}MiB."
+msgstr "Файл слишком большой {{filesize}}. Максимальный размер файла: {{maxFilesize}}MiB."
+
+#: vshaurme/settings.py:71
+msgid "Server error: {{statusCode}}"
+msgstr "Ошибка сервера: {{statusCode}}"
+
+#: vshaurme/settings.py:72
+msgid "Your browser does not support drag'n'drop file uploads."
+msgstr "Ваш браузер слишком старый для этого де**ма"
+
+#: vshaurme/settings.py:73
+msgid "Your can't upload any more files."
+msgstr "Вы не можете загрузить больше файлов"
+
 #: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
 #: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:38
 #: vshaurme/forms/auth.py:43
