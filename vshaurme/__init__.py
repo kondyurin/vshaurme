@@ -47,6 +47,7 @@ def register_extensions(app):
     whooshee.init_app(app)
     avatars.init_app(app)
     csrf.init_app(app)
+
     babel.init_app(app)
     # @babel.localeselector
     # def get_locale():

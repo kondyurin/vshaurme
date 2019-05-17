@@ -1,5 +1,6 @@
 from flask import render_template, flash, Blueprint, request, current_app
 from flask_login import login_required
+from flask_babel import _
 
 from vshaurme.decorators import admin_required, permission_required
 from vshaurme.extensions import db
