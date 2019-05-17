@@ -14,13 +14,17 @@ from vshaurme.extensions import bootstrap, db, login_manager, mail, dropzone, mo
 from vshaurme.models import Role, User, Photo, Tag, Follow, Notification, Comment, Collect, Permission
 from vshaurme.settings import config
 
+import rollbar
+import rollbar.contrib.flask
+from flask import got_request_exception
+
 
 def create_app(config_name=None):
     if config_name is None:
         config_name = os.getenv('FLASK_CONFIG', 'development')
 
     app = Flask('vshaurme')
-    
+
     app.config.from_object(config[config_name])
 
     register_extensions(app)
@@ -43,6 +47,19 @@ def register_extensions(app):
     whooshee.init_app(app)
     avatars.init_app(app)
     csrf.init_app(app)
+
+    @app.before_first_request
+    def init_rollbar(app):
+        """init rollbar module"""
+        rollbar.init(
+            '5e56487c7d1642d686110e4a1a3254b8',
+            'vshaurme',
+            # server root directory, makes tracebacks prettier
+            root=os.path.dirname(os.path.realpath(__file__)),
+            # flask already sets up logging
+            allow_logging_basic_config=False)
+        # send exceptions from `app` to rollbar, using flask's signal system.
+        got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 
 
 def register_blueprints(app):
