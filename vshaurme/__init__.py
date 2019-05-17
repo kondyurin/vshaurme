@@ -16,7 +16,7 @@ from vshaurme.settings import config
 
 import rollbar
 import rollbar.contrib.flask
-from flask import got_request_exception
+from flask import got_request_exception, current_app
 
 
 def create_app(config_name=None):
@@ -27,6 +27,7 @@ def create_app(config_name=None):
 
     app.config.from_object(config[config_name])
 
+    register_rollbar(app)
     register_extensions(app)
     register_blueprints(app)
     register_commands(app)
@@ -48,12 +49,14 @@ def register_extensions(app):
     avatars.init_app(app)
     csrf.init_app(app)
 
+
+def register_rollbar(app):
     @app.before_first_request
     def init_rollbar():
         """init rollbar module"""
         rollbar.init(
-            '5e56487c7d1642d686110e4a1a3254b8',
-            'vshaurme',
+            current_app.config['ROLLBAR_KEY'],
+            current_app.config['ROLLBAR_NAME'],
             # server root directory, makes tracebacks prettier
             root=os.path.dirname(os.path.realpath(__file__)),
             # flask already sets up logging

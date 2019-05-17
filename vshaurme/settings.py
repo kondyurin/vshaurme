@@ -61,6 +61,9 @@ class BaseConfig:
 
     WHOOSHEE_MIN_STRING_LEN = 1
 
+    ROLLBAR_KEY = '5e56487c7d1642d686110e4a1a3254b8'
+    ROLLBAR_NAME = 'vshaurme'
+
 
 class DevelopmentConfig(BaseConfig):
     SQLALCHEMY_DATABASE_URI = \
