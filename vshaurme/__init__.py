@@ -1,7 +1,8 @@
 import os
 
 import click
-from flask import Flask, render_template
+from flask import Flask, render_template, g
+from flask_babel import get_locale
 from flask_login import current_user
 from flask_wtf.csrf import CSRFError
 
@@ -26,6 +27,10 @@ def create_app(config_name=None):
     app = Flask('vshaurme')
 
     app.config.from_object(config[config_name])
+
+    @app.before_request
+    def before_request():
+        g.locale = str(get_locale())
 
     register_extensions(app)
     register_blueprints(app)
