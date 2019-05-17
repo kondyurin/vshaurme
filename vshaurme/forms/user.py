@@ -3,29 +3,30 @@ from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed, FileRequired
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, HiddenField, ValidationError
 from wtforms.validators import DataRequired, Length, Email, EqualTo, Optional, Regexp
+from flask_babel import lazy_gettext as _l
 
 from vshaurme.models import User
 
 
 class EditProfileForm(FlaskForm):
-    name = StringField('Name', validators=[DataRequired(), Length(1, 30)])
-    username = StringField('Username', validators=[DataRequired(), Length(1, 20),
+    name = StringField(_l('Name'), validators=[DataRequired(), Length(1, 30)])
+    username = StringField(_l('Username'), validators=[DataRequired(), Length(1, 20),
                                                    Regexp('^[a-zA-Z0-9]*$',
-                                                          message='The username should contain only a-z, A-Z and 0-9.')])
-    website = StringField('Website', validators=[Optional(), Length(0, 255)])
-    location = StringField('City', validators=[Optional(), Length(0, 50)])
-    bio = TextAreaField('Bio', validators=[Optional(), Length(0, 120)])
+                                                          message=_l('The username should contain only a-z, A-Z and 0-9.'))])
+    website = StringField(_l('Website'), validators=[Optional(), Length(0, 255)])
+    location = StringField(_l('City'), validators=[Optional(), Length(0, 50)])
+    bio = TextAreaField(_l('Bio'), validators=[Optional(), Length(0, 120)])
     submit = SubmitField()
 
     def validate_username(self, field):
         if field.data != current_user.username and User.query.filter_by(username=field.data).first():
-            raise ValidationError('The username is already in use.')
+            raise ValidationError(_l('The username is already in use.'))
 
 
 class UploadAvatarForm(FlaskForm):
-    image = FileField('Upload', validators=[
+    image = FileField(_l('Upload'), validators=[
         FileRequired(),
-        FileAllowed(['jpg', 'png'], 'The file format should be .jpg or .png.')
+        FileAllowed(['jpg', 'png'], _l('The file format should be .jpg or .png.'))
     ])
     submit = SubmitField()
 
@@ -35,7 +36,7 @@ class CropAvatarForm(FlaskForm):
     y = HiddenField()
     w = HiddenField()
     h = HiddenField()
-    submit = SubmitField('Crop and Update')
+    submit = SubmitField(_l('Crop and Update'))
 
 
 class ChangeEmailForm(FlaskForm):
