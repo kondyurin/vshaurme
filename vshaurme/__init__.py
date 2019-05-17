@@ -49,7 +49,7 @@ def register_extensions(app):
     csrf.init_app(app)
 
     @app.before_first_request
-    def init_rollbar(app):
+    def init_rollbar():
         """init rollbar module"""
         rollbar.init(
             '5e56487c7d1642d686110e4a1a3254b8',
