@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-17 15:58+0300\n"
+"POT-Creation-Date: 2019-05-18 10:12+0300\n"
 "PO-Revision-Date: 2019-05-16 13:10+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -160,6 +160,14 @@ msgstr "Панель управления Вшаурме"
 msgid "Return Vsharume"
 msgstr "Назад в Вшаурме"
 
+#: vshaurme/templates/admin/index.html:22
+#: vshaurme/templates/admin/index.html:71
+#: vshaurme/templates/admin/index.html:82
+#: vshaurme/templates/admin/index.html:100
+#: vshaurme/templates/admin/index.html:110
+msgid "Manage"
+msgstr "Настройки"
+
 #: vshaurme/templates/admin/index.html:25
 #: vshaurme/templates/admin/index.html:67
 #: vshaurme/templates/admin/manage_tag.html:24
@@ -170,6 +178,7 @@ msgstr "Фото"
 
 #: vshaurme/templates/admin/index.html:26
 #: vshaurme/templates/admin/index.html:77
+#: vshaurme/templates/admin/manage_user.html:14
 msgid "Users"
 msgstr "Пользователи"
 
@@ -195,6 +204,7 @@ msgstr "Домой"
 
 #: vshaurme/templates/admin/index.html:45
 #: vshaurme/templates/main/notifications.html:28
+#: vshaurme/templates/user/settings/base.html:7
 msgid "Settings"
 msgstr "Настройки "
 
@@ -220,13 +230,6 @@ msgstr "Всего:"
 #: vshaurme/templates/admin/index.html:99
 msgid "Reported:"
 msgstr "Репосты:"
-
-#: vshaurme/templates/admin/index.html:71
-#: vshaurme/templates/admin/index.html:82
-#: vshaurme/templates/admin/index.html:100
-#: vshaurme/templates/admin/index.html:110
-msgid "Manage"
-msgstr "Настройки"
 
 #: vshaurme/templates/admin/index.html:79
 msgid "Total"
@@ -723,5 +726,60 @@ msgstr ""
 
 #: vshaurme/templates/main/upload.html:19
 msgid "Done"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:12
+msgid "Edit Profile"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:13
+#: vshaurme/templates/user/settings/change_avatar.html:4
+#: vshaurme/templates/user/settings/change_avatar.html:13
+msgid "Change Avatar"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:14
+#: vshaurme/templates/user/settings/change_password.html:4
+#: vshaurme/templates/user/settings/change_password.html:8
+msgid "Change Password"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:15
+#: vshaurme/templates/user/settings/change_email.html:4
+#: vshaurme/templates/user/settings/change_email.html:8
+msgid "Change Email"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:16
+msgid "Notification"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:17
+msgid "Privacy"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:18
+#: vshaurme/templates/user/settings/delete_account.html:4
+#: vshaurme/templates/user/settings/delete_account.html:8
+msgid "Delete Account"
+msgstr ""
+
+#: vshaurme/templates/user/settings/change_avatar.html:17
+msgid ""
+"Your file's size must be less than 3 MB, the allowed formats are png and "
+"jpg."
+msgstr ""
+
+#: vshaurme/templates/user/settings/edit_notification.html:4
+#: vshaurme/templates/user/settings/edit_notification.html:8
+msgid "Notification Settings"
+msgstr ""
+
+#: vshaurme/templates/user/settings/edit_privacy.html:4
+msgid "Privacy Settings"
+msgstr ""
+
+#: vshaurme/templates/user/settings/edit_privacy.html:8
+msgid "Edit Privacy"
 msgstr ""
 
