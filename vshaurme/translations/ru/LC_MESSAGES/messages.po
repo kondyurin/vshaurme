@@ -701,7 +701,7 @@ msgstr "Мои коллекции"
 
 #: vshaurme/templates/main/_sidebar.html:24
 msgid "Hot Tags"
-msgstr "Горячие тэги"
+msgstr "Свежие тэги"
 
 #: vshaurme/templates/main/collectors.html:5
 #: vshaurme/templates/main/collectors.html:19

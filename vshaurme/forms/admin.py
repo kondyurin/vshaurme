@@ -12,7 +12,7 @@ class EditProfileAdminForm(EditProfileForm):
     role = SelectField(_l('Role'), coerce=int)
     active = BooleanField(_l('Active'))
     confirmed = BooleanField(_l('Confirmed'))
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))
 
     def __init__(self, user, *args, **kwargs):
         super(EditProfileAdminForm, self).__init__(*args, **kwargs)
