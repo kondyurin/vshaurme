@@ -877,3 +877,58 @@ msgstr "Настройки конфиденциальности"
 msgid "Edit Privacy"
 msgstr "Редактировать настройки конфиденциальности"
 
+#: vshaurme/templates/user/settings/base.html:12
+msgid "Edit Profile"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:13
+#: vshaurme/templates/user/settings/change_avatar.html:4
+#: vshaurme/templates/user/settings/change_avatar.html:13
+msgid "Change Avatar"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:14
+#: vshaurme/templates/user/settings/change_password.html:4
+#: vshaurme/templates/user/settings/change_password.html:8
+msgid "Change Password"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:15
+#: vshaurme/templates/user/settings/change_email.html:4
+#: vshaurme/templates/user/settings/change_email.html:8
+msgid "Change Email"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:16
+msgid "Notification"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:17
+msgid "Privacy"
+msgstr ""
+
+#: vshaurme/templates/user/settings/base.html:18
+#: vshaurme/templates/user/settings/delete_account.html:4
+#: vshaurme/templates/user/settings/delete_account.html:8
+msgid "Delete Account"
+msgstr ""
+
+#: vshaurme/templates/user/settings/change_avatar.html:17
+msgid ""
+"Your file's size must be less than 3 MB, the allowed formats are png and "
+"jpg."
+msgstr ""
+
+#: vshaurme/templates/user/settings/edit_notification.html:4
+#: vshaurme/templates/user/settings/edit_notification.html:8
+msgid "Notification Settings"
+msgstr ""
+
+#: vshaurme/templates/user/settings/edit_privacy.html:4
+msgid "Privacy Settings"
+msgstr ""
+
+#: vshaurme/templates/user/settings/edit_privacy.html:8
+msgid "Edit Privacy"
+msgstr ""
+
