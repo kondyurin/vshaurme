@@ -7,17 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-19 17:02+0300\n"
-"PO-Revision-Date: 2019-05-16 13:10+0300\n"
+"POT-Creation-Date: 2019-05-19 19:28+0300\n"
+"PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: vshaurme/decorators.py:13
+#, python-format
+msgid ""
+"Please confirm your account first.Not receive the email?<a class=\"alert-link"
+"\" href=\"%s\">Resend Confirm Email</a>"
+msgstr ""
+"Пожалуйста, сначала подтвердите ваш аккаунт. Не получили запрос по почте? <a "
+"class=«alert-link» href=«%s»>Оправить на почту еще раз</a>"
 
 #: vshaurme/settings.py:68
 msgid "Drop files here to upload"
@@ -30,8 +40,8 @@ msgstr "Вы не можете загрузить фал этого типа"
 #: vshaurme/settings.py:70
 msgid "File is too big {{filesize}}. Max filesize: {{maxFilesize}}MiB."
 msgstr ""
-"Файл слишком большой {{filesize}}. Максимальный размер файла: "
-"{{maxFilesize}}MiB."
+"Файл слишком большой {{filesize}}. Максимальный размер файла: {{maxFilesize}}"
+"MiB."
 
 #: vshaurme/settings.py:71
 msgid "Server error: {{statusCode}}"
@@ -51,7 +61,7 @@ msgstr "времени"
 
 #: vshaurme/blueprints/main.py:376
 msgid "collects"
-msgstr ""
+msgstr "собрать"
 
 #: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
 #: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:38
@@ -215,10 +225,11 @@ msgstr "Домой"
 
 #: vshaurme/templates/admin/index.html:45 vshaurme/templates/base.html:68
 #: vshaurme/templates/main/notifications.html:28
+#: vshaurme/templates/user/settings/base.html:7
 msgid "Settings"
 msgstr "Настройки "
 
-#: vshaurme/templates/base.html:72
+#: vshaurme/templates/admin/index.html:4 vshaurme/templates/base.html:72
 msgid "Dashboard"
 msgstr "Дашборд"
 
@@ -229,7 +240,7 @@ msgstr "Выйти"
 #: vshaurme/templates/auth/login.html:4 vshaurme/templates/base.html:81
 #: vshaurme/templates/main/_comment.html:121
 msgid "Login"
-msgstr "Авторизоваться"
+msgstr "Авторизация"
 
 #: vshaurme/templates/base.html:82
 msgid "Join Vshaurme"
@@ -238,6 +249,45 @@ msgstr "Зарегистрироваться"
 #: vshaurme/templates/base.html:108
 msgid "Capture and share every wonderful moment."
 msgstr "Запечатлеть и поделиться каждым чудесным моментом."
+
+#: vshaurme/templates/admin/edit_profile.html:5
+#: vshaurme/templates/admin/edit_profile.html:16
+#: vshaurme/templates/admin/manage_user.html:105
+#: vshaurme/templates/user/_header.html:60
+#: vshaurme/templates/user/_header.html:66
+msgid "Edit profile"
+msgstr "Редактировать профиль"
+
+#: vshaurme/templates/admin/edit_profile.html:10
+#: vshaurme/templates/admin/index.html:61
+#: vshaurme/templates/admin/manage_comment.html:9
+#: vshaurme/templates/admin/manage_photo.html:9
+#: vshaurme/templates/admin/manage_tag.html:9
+#: vshaurme/templates/admin/manage_user.html:9
+msgid "Dashboard Home"
+msgstr "Панель управления"
+
+#: vshaurme/templates/admin/edit_profile.html:11
+#: vshaurme/templates/admin/manage_user.html:10
+msgid "Manage User"
+msgstr "Управление пользователями"
+
+#: vshaurme/templates/admin/edit_profile.html:12
+#: vshaurme/templates/admin/edit_profile.html:22
+#: vshaurme/templates/user/settings/base.html:12
+#: vshaurme/templates/user/settings/edit_profile.html:4
+#: vshaurme/templates/user/settings/edit_profile.html:8
+msgid "Edit Profile"
+msgstr "Редактировать профиль"
+
+#: vshaurme/templates/admin/edit_profile.html:17
+#: vshaurme/templates/main/collectors.html:12
+msgid "Return"
+msgstr "Вернуться"
+
+#: vshaurme/templates/admin/edit_profile.html:18
+msgid "'s homepage"
+msgstr "Домашняя страница"
 
 #: vshaurme/templates/admin/index.html:10
 msgid "Vshaurme Dashboard"
@@ -280,14 +330,6 @@ msgstr "Тэги"
 #: vshaurme/templates/main/_comment.html:2
 msgid "Comments"
 msgstr "Комментарии"
-
-#: vshaurme/templates/admin/index.html:61
-#: vshaurme/templates/admin/manage_comment.html:9
-#: vshaurme/templates/admin/manage_photo.html:9
-#: vshaurme/templates/admin/manage_tag.html:9
-#: vshaurme/templates/admin/manage_user.html:9
-msgid "Dashboard Home"
-msgstr "Панель управления"
 
 #: vshaurme/templates/admin/index.html:69
 #: vshaurme/templates/admin/index.html:98
@@ -384,6 +426,7 @@ msgstr "Фото"
 
 #: vshaurme/templates/admin/manage_comment.html:62
 #: vshaurme/templates/admin/manage_photo.html:79
+#: vshaurme/templates/admin/manage_tag.html:37
 #: vshaurme/templates/main/_comment.html:59
 #: vshaurme/templates/main/photo.html:18 vshaurme/templates/main/photo.html:70
 #: vshaurme/templates/main/tag.html:15
@@ -397,7 +440,7 @@ msgstr "Нет комментариев"
 
 #: vshaurme/templates/admin/manage_photo.html:4
 msgid "Manage Photos"
-msgstr ""
+msgstr "Управлять фотографиями"
 
 #: vshaurme/templates/admin/manage_photo.html:10
 msgid "Manage Photo"
@@ -433,10 +476,6 @@ msgstr "Нет тэгов."
 msgid "Manage Users"
 msgstr "Управление пользователями"
 
-#: vshaurme/templates/admin/manage_user.html:10
-msgid "Manage User"
-msgstr "Управление пользователями"
-
 #: vshaurme/templates/admin/manage_user.html:19
 msgid "Filter"
 msgstr "Фильтр"
@@ -470,13 +509,6 @@ msgstr "Аватары"
 msgid "Name/username"
 msgstr "Имя пользователя"
 
-#: vshaurme/templates/admin/manage_user.html:74
-#: vshaurme/templates/admin/manage_user.html:81
-#: vshaurme/templates/admin/manage_user.html:89
-#: vshaurme/templates/admin/manage_user.html:96
-msgid "Are you sure?"
-msgstr "Вы уверены?"
-
 #: vshaurme/templates/admin/manage_user.html:75
 msgid "Unlock"
 msgstr "Разблокировать"
@@ -492,12 +524,6 @@ msgstr "Забанить"
 #: vshaurme/templates/admin/manage_user.html:97
 msgid "Unblock"
 msgstr "Разбанить"
-
-#: vshaurme/templates/admin/manage_user.html:105
-#: vshaurme/templates/user/_header.html:60
-#: vshaurme/templates/user/_header.html:66
-msgid "Edit profile"
-msgstr "Редактировать профиль"
 
 #: vshaurme/templates/admin/manage_user.html:113
 msgid "No users."
@@ -682,10 +708,6 @@ msgstr "Горячие тэги"
 msgid "Collectors"
 msgstr "Коллекционеры"
 
-#: vshaurme/templates/main/collectors.html:12
-msgid "Return"
-msgstr "Вернуться"
-
 #: vshaurme/templates/main/explore.html:16
 msgid "Change"
 msgstr "Изменить"
@@ -828,13 +850,9 @@ msgstr "Нет подписчиков."
 msgid "No followings."
 msgstr "Нет подписок."
 
-#: vshaurme/templates/user/settings/base.html:12
-#: vshaurme/templates/user/settings/edit_profile.html:4
-#: vshaurme/templates/user/settings/edit_profile.html:8
-msgid "Edit Profile"
-msgstr "Редактировать профиль"
-
 #: vshaurme/templates/user/settings/base.html:13
+#: vshaurme/templates/user/settings/change_avatar.html:4
+#: vshaurme/templates/user/settings/change_avatar.html:13
 msgid "Change Avatar"
 msgstr "Изменить аватар"
 
@@ -864,6 +882,11 @@ msgstr "Конфиденциальность"
 msgid "Delete Account"
 msgstr "Удалить аккаунт"
 
+#: vshaurme/templates/user/settings/change_avatar.html:17
+msgid ""
+"Your file's size must be less than 3 MB, the allowed formats are png and jpg."
+msgstr "Ваш  файл должен быть меньше чем 3 MB, допустимые форматы png и jpg."
+
 #: vshaurme/templates/user/settings/edit_notification.html:4
 #: vshaurme/templates/user/settings/edit_notification.html:8
 msgid "Notification Settings"
@@ -877,3 +900,5 @@ msgstr "Настройки конфиденциальности"
 msgid "Edit Privacy"
 msgstr "Редактировать настройки конфиденциальности"
 
+#~ msgid "Are you sure?"
+#~ msgstr "Вы уверены?"
