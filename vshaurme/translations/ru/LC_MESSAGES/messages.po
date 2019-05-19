@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-19 22:33+0300\n"
+"POT-Creation-Date: 2019-05-19 23:00+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -415,6 +415,7 @@ msgstr "Содержимое"
 
 #: vshaurme/templates/admin/manage_comment.html:39
 #: vshaurme/templates/admin/manage_photo.html:40
+#: vshaurme/templates/main/_comment.html:34
 msgid "Author"
 msgstr "Автор"
 
@@ -653,13 +654,18 @@ msgid "comment"
 msgstr "Комментировать"
 
 #: vshaurme/templates/main/_comment.html:52
+#: vshaurme/templates/main/_comment.html:78
 msgid "Reply"
-msgstr "Ответить"
+msgstr "Ответ для"
 
 #: vshaurme/templates/main/_comment.html:67
 #: vshaurme/templates/main/photo.html:23
 msgid "Report"
 msgstr "Пожаловаться"
+
+#: vshaurme/templates/main/_comment.html:99
+msgid "Reply to"
+msgstr "Ответить"
 
 #: vshaurme/templates/main/_comment.html:100
 #: vshaurme/templates/main/_photo_sidebar.html:49
