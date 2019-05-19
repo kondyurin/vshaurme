@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-19 23:00+0300\n"
+"POT-Creation-Date: 2019-05-20 00:33+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -54,6 +54,34 @@ msgstr "Ваш браузер слишком старый для этого де
 msgid "Your can't upload any more files."
 msgstr "Вы не можете загрузить больше файлов"
 
+#: vshaurme/blueprints/admin.py:52
+msgid "Profile updated."
+msgstr "Профиль обновлен."
+
+#: vshaurme/blueprints/admin.py:71 vshaurme/blueprints/admin.py:92
+msgid "Permission denied."
+msgstr "Доступ запрещен."
+
+#: vshaurme/blueprints/admin.py:74
+msgid "Account blocked."
+msgstr "Учетная запись заблокирована."
+
+#: vshaurme/blueprints/admin.py:83
+msgid "Block canceled."
+msgstr "Блокировка отменена."
+
+#: vshaurme/blueprints/admin.py:95
+msgid "Account locked."
+msgstr "Учетная запись заблокирована."
+
+#: vshaurme/blueprints/admin.py:104
+msgid "Lock canceled."
+msgstr "Блокировка отменена."
+
+#: vshaurme/blueprints/admin.py:114
+msgid "Tag deleted."
+msgstr "Тег удален."
+
 #: vshaurme/blueprints/main.py:370
 msgid "time"
 msgstr "времени"
@@ -61,6 +89,10 @@ msgstr "времени"
 #: vshaurme/blueprints/main.py:376
 msgid "collects"
 msgstr ""
+
+#: vshaurme/blueprints/user.py:203
+msgid "Notification settings updated."
+msgstr "Настройки уведомлений обновлены."
 
 #: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
 #: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:38

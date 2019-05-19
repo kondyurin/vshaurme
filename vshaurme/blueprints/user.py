@@ -1,5 +1,6 @@
 from flask import render_template, flash, redirect, url_for, current_app, request, Blueprint
 from flask_login import login_required, current_user, fresh_login_required, logout_user
+from flask_babel import lazy_gettext as _l
 
 from vshaurme.decorators import confirm_required, permission_required
 from vshaurme.emails import send_change_email_email
@@ -199,7 +200,7 @@ def notification_setting():
         current_user.receive_comment_notification = form.receive_comment_notification.data
         current_user.receive_follow_notification = form.receive_follow_notification.data
         db.session.commit()
-        flash('Notification settings updated.', 'success')
+        flash(_l('Notification settings updated.'), 'success')
         return redirect(url_for('.index', username=current_user.username))
     form.receive_collect_notification.data = current_user.receive_collect_notification
     form.receive_comment_notification.data = current_user.receive_comment_notification
