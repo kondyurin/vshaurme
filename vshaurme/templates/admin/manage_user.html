@@ -71,14 +71,14 @@
                             <form class="inline" action="{{ url_for('admin.unlock_user', user_id=user.id) }}"
                                   method="post">
                                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                                <input type="submit" onclick="return confirm({{ _('Are you sure?') }});"
+                                <input type="submit" onclick="return confirm('Are you sure?');"
                                        class="btn btn-secondary btn-sm" value={{ _("Unlock") }}>
                             </form>
                         {% else %}
                             <form class="inline" action="{{ url_for('admin.lock_user', user_id=user.id) }}"
                                   method="post">
                                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                                <input type="submit" onclick="return confirm({{ _('Are you sure?') }};"
+                                <input type="submit" onclick="return confirm('Are you sure?');"
                                        class="btn btn-warning btn-sm" value={{ _("Lock") }}>
                             </form>
                         {% endif %}
@@ -86,14 +86,14 @@
                             <form class="inline" action="{{ url_for('admin.block_user', user_id=user.id) }}"
                                   method="post">
                                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                                <input type="submit" onclick="return confirm({{ _('Are you sure?') }});"
+                                <input type="submit" onclick="return confirm('Are you sure?');"
                                        class="btn btn-warning btn-sm" value={{ _("Block") }}>
                             </form>
                         {% else %}
                             <form class="inline" action="{{ url_for('admin.unblock_user', user_id=user.id) }}"
                                   method="post">
                                 <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
-                                <input type="submit" onclick="return confirm({{ _('Are you sure?') }});"
+                                <input type="submit" onclick="return confirm('Are you sure?');"
                                        class="btn btn-secondary btn-sm" value={{ _("Unblock") }}>
                             </form>
                         {% endif %}
