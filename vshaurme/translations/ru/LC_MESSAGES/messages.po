@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-20 01:20+0300\n"
+"POT-Creation-Date: 2019-05-20 01:31+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -54,7 +54,7 @@ msgstr "Ваш браузер слишком старый для этого де
 msgid "Your can't upload any more files."
 msgstr "Вы не можете загрузить больше файлов"
 
-#: vshaurme/blueprints/admin.py:52
+#: vshaurme/blueprints/admin.py:52 vshaurme/blueprints/user.py:105
 msgid "Profile updated."
 msgstr "Профиль обновлен."
 
@@ -98,7 +98,7 @@ msgstr "Неверный e-mail адрес или пароль."
 msgid "Logout success."
 msgstr "Успешный выход."
 
-#: vshaurme/blueprints/auth.py:72
+#: vshaurme/blueprints/auth.py:72 vshaurme/blueprints/user.py:178
 msgid "Confirm email sent, check your inbox."
 msgstr "Письмо с подтверждением отправлено, проверьте Входящие."
 
@@ -106,7 +106,7 @@ msgstr "Письмо с подтверждением отправлено, пр�
 msgid "Account confirmed."
 msgstr "Аккаунт подтвержден."
 
-#: vshaurme/blueprints/auth.py:87
+#: vshaurme/blueprints/auth.py:87 vshaurme/blueprints/user.py:190
 msgid "Invalid or expired token."
 msgstr "Неверный токен, либо время жизни токена истекло."
 
@@ -122,7 +122,7 @@ msgstr "Письмо со сбросом пароля отправлено, пр
 msgid "Invalid email."
 msgstr "Некорректный e-mail адрес."
 
-#: vshaurme/blueprints/auth.py:133
+#: vshaurme/blueprints/auth.py:133 vshaurme/blueprints/user.py:164
 msgid "Password updated."
 msgstr "Пароль обновлен."
 
@@ -210,9 +210,53 @@ msgstr "времени"
 msgid "collects"
 msgstr ""
 
+#: vshaurme/blueprints/user.py:22
+msgid "Your account is locked."
+msgstr "Ваш аккаунт заблокирован."
+
+#: vshaurme/blueprints/user.py:51
+msgid "Already followed."
+msgstr "Уже отслеживается."
+
+#: vshaurme/blueprints/user.py:55
+msgid "User followed."
+msgstr "Пользователь отслеживается."
+
+#: vshaurme/blueprints/user.py:66
+msgid "Not follow yet."
+msgstr "Еще не отслеживается."
+
+#: vshaurme/blueprints/user.py:70
+msgid "User unfollowed."
+msgstr "Пользователь не отслеживается."
+
+#: vshaurme/blueprints/user.py:134
+msgid "Image uploaded, please crop."
+msgstr "Изображение загружено, пожалуйста, обрежьте его."
+
+#: vshaurme/blueprints/user.py:151
+msgid "Avatar updated."
+msgstr "Аватар обновлен."
+
+#: vshaurme/blueprints/user.py:167
+msgid "Old password is incorrect."
+msgstr "Старый пароль неверный."
+
+#: vshaurme/blueprints/user.py:187
+msgid "Email updated."
+msgstr "E-mail адрес обновлен."
+
 #: vshaurme/blueprints/user.py:203
 msgid "Notification settings updated."
 msgstr "Настройки уведомлений обновлены."
+
+#: vshaurme/blueprints/user.py:218
+msgid "Privacy settings updated."
+msgstr "Настройки конфиденциальности обновлены."
+
+#: vshaurme/blueprints/user.py:231
+msgid "Your are free, goodbye!"
+msgstr "Добби свободен, до свидания!"
 
 #: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
 #: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:38
