@@ -15,12 +15,12 @@
                     {% endfor %}
                 {% else %}
                     <div class="tip">
-                        <h3>No collection.</h3>
+                        <h3>{{_('No collection.')}}</h3>
                     </div>
                 {% endif %}
             {% else %}
                 <div class="tip">
-                    <h3>This user's collections was private.</h3>
+                    <h3>{{_("This user's collections was private.")}}</h3>
                 </div>
             {% endif %}
         </div>

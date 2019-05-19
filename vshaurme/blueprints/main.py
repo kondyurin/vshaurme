@@ -4,6 +4,7 @@ from flask import render_template, flash, redirect, url_for, current_app, \
     send_from_directory, request, abort, Blueprint
 from flask_login import login_required, current_user
 from sqlalchemy.sql.expression import func
+from flask_babel import lazy_gettext as _l
 
 from vshaurme.decorators import confirm_required, permission_required
 from vshaurme.extensions import db
@@ -366,13 +367,13 @@ def show_tag(tag_id, order):
     tag = Tag.query.get_or_404(tag_id)
     page = request.args.get('page', 1, type=int)
     per_page = current_app.config['VSHAURME_PHOTO_PER_PAGE']
-    order_rule = 'time'
+    order_rule = _l('time')
     pagination = Photo.query.with_parent(tag).order_by(Photo.timestamp.desc()).paginate(page, per_page)
     photos = pagination.items
 
     if order == 'by_collects':
         photos.sort(key=lambda x: len(x.collectors), reverse=True)
-        order_rule = 'collects'
+        order_rule = _l('collects')
     return render_template('main/tag.html', tag=tag, pagination=pagination, photos=photos, order_rule=order_rule)
 
 

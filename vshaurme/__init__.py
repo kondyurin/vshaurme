@@ -187,4 +187,4 @@ def register_commands(app):
     def compilelang():
         if os.system('pybabel compile -d vshaurme/translations'):
             raise RuntimeError('extract command failed')
-        click.echo('Done.')
+        click.echo('Done.') 
