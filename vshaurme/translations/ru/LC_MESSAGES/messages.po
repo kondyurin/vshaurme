@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-20 00:33+0300\n"
+"POT-Creation-Date: 2019-05-20 01:06+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -81,6 +81,54 @@ msgstr "Блокировка отменена."
 #: vshaurme/blueprints/admin.py:114
 msgid "Tag deleted."
 msgstr "Тег удален."
+
+#: vshaurme/blueprints/auth.py:25
+msgid "Login success."
+msgstr "Успешный вход."
+
+#: vshaurme/blueprints/auth.py:28
+msgid "Your account is blocked."
+msgstr "Ваш аккаунт заблокирован."
+
+#: vshaurme/blueprints/auth.py:30
+msgid "Invalid email or password."
+msgstr "Неверный e-mail адрес или пароль."
+
+#: vshaurme/blueprints/auth.py:51
+msgid "Logout success."
+msgstr "Успешный выход."
+
+#: vshaurme/blueprints/auth.py:72
+msgid "Confirm email sent, check your inbox."
+msgstr "Письмо с подтверждением отправлено, проверьте Входящие."
+
+#: vshaurme/blueprints/auth.py:84
+msgid "Account confirmed."
+msgstr "Аккаунт подтвержден."
+
+#: vshaurme/blueprints/auth.py:87
+msgid "Invalid or expired token."
+msgstr "Неверный токен, либо время жизни токена истекло."
+
+#: vshaurme/blueprints/auth.py:99
+msgid "New email sent, check your inbox."
+msgstr "Новое письмо отправлено, проверьте Входящие."
+
+#: vshaurme/blueprints/auth.py:114
+msgid "Password reset email sent, check your inbox."
+msgstr "Письмо со сбросом пароля отправлено, проверьте Входящие."
+
+#: vshaurme/blueprints/auth.py:116
+msgid "Invalid email."
+msgstr "Некорректный e-mail адрес."
+
+#: vshaurme/blueprints/auth.py:133
+msgid "Password updated."
+msgstr "Пароль обновлен."
+
+#: vshaurme/blueprints/auth.py:136
+msgid "Invalid or expired link."
+msgstr "Неверная ссылка, либо время жизни ссылки истекло."
 
 #: vshaurme/blueprints/main.py:370
 msgid "time"
