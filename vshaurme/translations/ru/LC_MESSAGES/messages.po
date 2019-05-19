@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-20 01:06+0300\n"
+"POT-Creation-Date: 2019-05-20 01:20+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -78,7 +78,7 @@ msgstr "Учетная запись заблокирована."
 msgid "Lock canceled."
 msgstr "Блокировка отменена."
 
-#: vshaurme/blueprints/admin.py:114
+#: vshaurme/blueprints/admin.py:114 vshaurme/blueprints/main.py:394
 msgid "Tag deleted."
 msgstr "Тег удален."
 
@@ -129,6 +129,78 @@ msgstr "Пароль обновлен."
 #: vshaurme/blueprints/auth.py:136
 msgid "Invalid or expired link."
 msgstr "Неверная ссылка, либо время жизни ссылки истекло."
+
+#: vshaurme/blueprints/main.py:47
+msgid "Enter keyword about photo, user or tag."
+msgstr "Введите ключевое слово фото, пользователя или тег."
+
+#: vshaurme/blueprints/main.py:87
+msgid "Notification archived."
+msgstr "Уведомление заархивировано."
+
+#: vshaurme/blueprints/main.py:97
+msgid "All notifications archived."
+msgstr "Все уведомления заархивированы."
+
+#: vshaurme/blueprints/main.py:157
+msgid "This is already the last one."
+msgstr "Это уже последнее фото."
+
+#: vshaurme/blueprints/main.py:168
+msgid "This is already the first one."
+msgstr "Это фото уже первое."
+
+#: vshaurme/blueprints/main.py:180
+msgid "Already collected."
+msgstr "Уже получено."
+
+#: vshaurme/blueprints/main.py:184
+msgid "Photo collected."
+msgstr "Фото получено."
+
+#: vshaurme/blueprints/main.py:195
+msgid "Not collect yet."
+msgstr "Еще не получено."
+
+#: vshaurme/blueprints/main.py:199
+msgid "Photo uncollected."
+msgstr "Фото не получено."
+
+#: vshaurme/blueprints/main.py:210
+msgid "Comment reported."
+msgstr "Комментарий отправлен."
+
+#: vshaurme/blueprints/main.py:221
+msgid "Photo reported."
+msgstr "Фото отправлено."
+
+#: vshaurme/blueprints/main.py:246
+msgid "Description updated."
+msgstr "Описание обновлено."
+
+#: vshaurme/blueprints/main.py:271
+msgid "Comment published."
+msgstr "Комментарий опубликован."
+
+#: vshaurme/blueprints/main.py:298
+msgid "Tag added."
+msgstr "Тег добавлен."
+
+#: vshaurme/blueprints/main.py:313
+msgid "Comment disabled"
+msgstr "Комментарий выключен."
+
+#: vshaurme/blueprints/main.py:316
+msgid "Comment enabled."
+msgstr "Комментарий включен."
+
+#: vshaurme/blueprints/main.py:340
+msgid "Photo deleted."
+msgstr "Фото удалено."
+
+#: vshaurme/blueprints/main.py:360
+msgid "Comment deleted."
+msgstr "Комментарий удален."
 
 #: vshaurme/blueprints/main.py:370
 msgid "time"
