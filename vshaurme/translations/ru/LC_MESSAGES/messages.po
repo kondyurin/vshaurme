@@ -61,7 +61,7 @@ msgstr "времени"
 
 #: vshaurme/blueprints/main.py:376
 msgid "collects"
-msgstr "собрать"
+msgstr ""
 
 #: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
 #: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:38
