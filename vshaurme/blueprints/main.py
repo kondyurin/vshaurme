@@ -4,6 +4,7 @@ from flask import render_template, flash, redirect, url_for, current_app, \
     send_from_directory, request, abort, Blueprint
 from flask_login import login_required, current_user
 from sqlalchemy.sql.expression import func
+from flask_babel import lazy_gettext as _l
 
 from vshaurme.decorators import confirm_required, permission_required
 from vshaurme.extensions import db
@@ -43,7 +44,7 @@ def explore():
 def search():
     q = request.args.get('q', '').strip()
     if q == '':
-        flash('Enter keyword about photo, user or tag.', 'warning')
+        flash(_l('Enter keyword about photo, user or tag.'), 'warning')
         return redirect_back()
 
     category = request.args.get('category', 'photo')
@@ -83,7 +84,7 @@ def read_notification(notification_id):
 
     notification.is_read = True
     db.session.commit()
-    flash('Notification archived.', 'success')
+    flash(_l('Notification archived.'), 'success')
     return redirect(url_for('.show_notifications'))
 
 
@@ -93,7 +94,7 @@ def read_all_notification():
     for notification in current_user.notifications:
         notification.is_read = True
     db.session.commit()
-    flash('All notifications archived.', 'success')
+    flash(_l('All notifications archived.'), 'success')
     return redirect(url_for('.show_notifications'))
 
 
@@ -153,7 +154,7 @@ def photo_next(photo_id):
     photo_n = Photo.query.with_parent(photo.author).filter(Photo.id < photo_id).order_by(Photo.id.desc()).first()
 
     if photo_n is None:
-        flash('This is already the last one.', 'info')
+        flash(_l('This is already the last one.'), 'info')
         return redirect(url_for('.show_photo', photo_id=photo_id))
     return redirect(url_for('.show_photo', photo_id=photo_n.id))
 
@@ -164,7 +165,7 @@ def photo_previous(photo_id):
     photo_p = Photo.query.with_parent(photo.author).filter(Photo.id > photo_id).order_by(Photo.id.asc()).first()
 
     if photo_p is None:
-        flash('This is already the first one.', 'info')
+        flash(_l('This is already the first one.'), 'info')
         return redirect(url_for('.show_photo', photo_id=photo_id))
     return redirect(url_for('.show_photo', photo_id=photo_p.id))
 
@@ -176,11 +177,11 @@ def photo_previous(photo_id):
 def collect(photo_id):
     photo = Photo.query.get_or_404(photo_id)
     if current_user.is_collecting(photo):
-        flash('Already collected.', 'info')
+        flash(_l('Already collected.'), 'info')
         return redirect(url_for('.show_photo', photo_id=photo_id))
 
     current_user.collect(photo)
-    flash('Photo collected.', 'success')
+    flash(_l('Photo collected.'), 'success')
     if current_user != photo.author and photo.author.receive_collect_notification:
         push_collect_notification(collector=current_user, photo_id=photo_id, receiver=photo.author)
     return redirect(url_for('.show_photo', photo_id=photo_id))
@@ -191,11 +192,11 @@ def collect(photo_id):
 def uncollect(photo_id):
     photo = Photo.query.get_or_404(photo_id)
     if not current_user.is_collecting(photo):
-        flash('Not collect yet.', 'info')
+        flash(_l('Not collect yet.'), 'info')
         return redirect(url_for('.show_photo', photo_id=photo_id))
 
     current_user.uncollect(photo)
-    flash('Photo uncollected.', 'info')
+    flash(_l('Photo uncollected.'), 'info')
     return redirect(url_for('.show_photo', photo_id=photo_id))
 
 
@@ -206,7 +207,7 @@ def report_comment(comment_id):
     comment = Comment.query.get_or_404(comment_id)
     comment.flag += 1
     db.session.commit()
-    flash('Comment reported.', 'success')
+    flash(_l('Comment reported.'), 'success')
     return redirect(url_for('.show_photo', photo_id=comment.photo_id))
 
 
@@ -217,7 +218,7 @@ def report_photo(photo_id):
     photo = Photo.query.get_or_404(photo_id)
     photo.flag += 1
     db.session.commit()
-    flash('Photo reported.', 'success')
+    flash(_l('Photo reported.'), 'success')
     return redirect(url_for('.show_photo', photo_id=photo.id))
 
 
@@ -242,7 +243,7 @@ def edit_description(photo_id):
     if form.validate_on_submit():
         photo.description = form.description.data
         db.session.commit()
-        flash('Description updated.', 'success')
+        flash(_l('Description updated.'), 'success')
 
     flash_errors(form)
     return redirect(url_for('.show_photo', photo_id=photo_id))
@@ -267,7 +268,7 @@ def new_comment(photo_id):
                 push_comment_notification(photo_id=photo.id, receiver=comment.replied.author)
         db.session.add(comment)
         db.session.commit()
-        flash('Comment published.', 'success')
+        flash(_l('Comment published.'), 'success')
 
         if current_user != photo.author and photo.author.receive_comment_notification:
             push_comment_notification(photo_id, receiver=photo.author, page=page)
@@ -294,7 +295,7 @@ def new_tag(photo_id):
             if tag not in photo.tags:
                 photo.tags.append(tag)
                 db.session.commit()
-        flash('Tag added.', 'success')
+        flash(_l('Tag added.'), 'success')
 
     flash_errors(form)
     return redirect(url_for('.show_photo', photo_id=photo_id))
@@ -309,10 +310,10 @@ def set_comment(photo_id):
 
     if photo.can_comment:
         photo.can_comment = False
-        flash('Comment disabled', 'info')
+        flash(_l('Comment disabled'), 'info')
     else:
         photo.can_comment = True
-        flash('Comment enabled.', 'info')
+        flash(_l('Comment enabled.'), 'info')
     db.session.commit()
     return redirect(url_for('.show_photo', photo_id=photo_id))
 
@@ -336,7 +337,7 @@ def delete_photo(photo_id):
 
     db.session.delete(photo)
     db.session.commit()
-    flash('Photo deleted.', 'info')
+    flash(_l('Photo deleted.'), 'info')
 
     photo_n = Photo.query.with_parent(photo.author).filter(Photo.id < photo_id).order_by(Photo.id.desc()).first()
     if photo_n is None:
@@ -356,7 +357,7 @@ def delete_comment(comment_id):
         abort(403)
     db.session.delete(comment)
     db.session.commit()
-    flash('Comment deleted.', 'info')
+    flash(_l('Comment deleted.'), 'info')
     return redirect(url_for('.show_photo', photo_id=comment.photo_id))
 
 
@@ -366,13 +367,13 @@ def show_tag(tag_id, order):
     tag = Tag.query.get_or_404(tag_id)
     page = request.args.get('page', 1, type=int)
     per_page = current_app.config['VSHAURME_PHOTO_PER_PAGE']
-    order_rule = 'time'
+    order_rule = _l('time')
     pagination = Photo.query.with_parent(tag).order_by(Photo.timestamp.desc()).paginate(page, per_page)
     photos = pagination.items
 
     if order == 'by_collects':
         photos.sort(key=lambda x: len(x.collectors), reverse=True)
-        order_rule = 'collects'
+        order_rule = _l('collects')
     return render_template('main/tag.html', tag=tag, pagination=pagination, photos=photos, order_rule=order_rule)
 
 
@@ -390,5 +391,5 @@ def delete_tag(photo_id, tag_id):
         db.session.delete(tag)
         db.session.commit()
 
-    flash('Tag deleted.', 'info')
+    flash(_l('Tag deleted.'), 'info')
     return redirect(url_for('.show_photo', photo_id=photo_id))

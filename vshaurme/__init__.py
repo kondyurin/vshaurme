@@ -1,7 +1,8 @@
 import os
 
 import click
-from flask import Flask, render_template
+from flask import Flask, render_template, g
+from flask_babel import get_locale
 from flask_login import current_user
 from flask_wtf.csrf import CSRFError
 
@@ -10,13 +11,17 @@ from vshaurme.blueprints.ajax import ajax_bp
 from vshaurme.blueprints.auth import auth_bp
 from vshaurme.blueprints.main import main_bp
 from vshaurme.blueprints.user import user_bp
-from vshaurme.extensions import bootstrap, db, login_manager, mail, dropzone, moment, whooshee, avatars, csrf
+from vshaurme.extensions import bootstrap, db, login_manager, mail, dropzone,\
+                                moment, whooshee, avatars, csrf, babel
 from vshaurme.models import Role, User, Photo, Tag, Follow, Notification, Comment, Collect, Permission
 from vshaurme.settings import config
 
 import rollbar
 import rollbar.contrib.flask
 from flask import got_request_exception, current_app
+
+
+
 
 
 def create_app(config_name=None):
@@ -26,6 +31,10 @@ def create_app(config_name=None):
     app = Flask('vshaurme')
 
     app.config.from_object(config[config_name])
+
+    @app.before_request
+    def before_request():
+        g.locale = str(get_locale())
 
     register_rollbar(app)
     register_extensions(app)
@@ -48,6 +57,11 @@ def register_extensions(app):
     whooshee.init_app(app)
     avatars.init_app(app)
     csrf.init_app(app)
+
+    babel.init_app(app)
+    # @babel.localeselector
+    # def get_locale():
+    #     return request.accept_languages.best_match(['en', 'ru'])
 
 
 def register_rollbar(app):
@@ -172,3 +186,25 @@ def register_commands(app):
         click.echo('Generating %d comments...' % comment)
         fake_comment(comment)
         click.echo('Done.')
+
+    @app.cli.command()
+    def updatelang():
+        """Update all languages."""
+        if os.system('pybabel extract -F babel.cfg -k _l -o messages.pot .'):
+            raise RuntimeError('extract command failed')
+        if os.system('pybabel update -i messages.pot -d vshaurme/translations'):
+            raise RuntimeError('extract command failed')
+        click.echo('Done.')
+
+    @app.cli.command()
+    @click.option('--lang', default='ru', help='Language to translate')
+    def createlang(lang):
+        if os.system(f'pybabel init -i messages.pot -d vshaurme/translations -l {lang}'):
+            raise RuntimeError('extract command failed')
+        click.echo('Done.')
+
+    @app.cli.command()
+    def compilelang():
+        if os.system('pybabel compile -d vshaurme/translations'):
+            raise RuntimeError('extract command failed')
+        click.echo('Done.') 
