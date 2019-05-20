@@ -28,7 +28,7 @@ class UploadAvatarForm(FlaskForm):
         FileRequired(),
         FileAllowed(['jpg', 'png'], _l('The file format should be .jpg or .png.'))
     ])
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))
 
 
 class CropAvatarForm(FlaskForm):
