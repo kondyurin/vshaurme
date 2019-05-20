@@ -24,11 +24,11 @@ class EditProfileForm(FlaskForm):
 
 
 class UploadAvatarForm(FlaskForm):
-    image = FileField(_l('Upload'), validators=[
-        FileRequired(),
+    image = FileField(_l('Upload')', validators=[
+        FileRequired(_l('Please choose a file')),
         FileAllowed(['jpg', 'png'], _l('The file format should be .jpg or .png.'))
     ])
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))
 
 
 class CropAvatarForm(FlaskForm):
