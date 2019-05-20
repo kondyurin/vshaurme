@@ -1,2 +1,2 @@
 FLASK_APP=vshaurme
-FLASK_ENV=development
+FLASK_ENV=production

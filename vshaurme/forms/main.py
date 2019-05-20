@@ -5,14 +5,14 @@ from flask_babel import lazy_gettext as _l
 
 class DescriptionForm(FlaskForm):
     description = TextAreaField(_l('Description'), validators=[Optional(), Length(0, 500)])
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))
 
 
 class TagForm(FlaskForm):
     tag = StringField(_l('Add Tag (use space to separate)'), validators=[Optional(), Length(0, 64)])
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))
 
 
 class CommentForm(FlaskForm):
     body = TextAreaField('', validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))

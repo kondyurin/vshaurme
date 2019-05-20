@@ -7,27 +7,26 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-19 19:28+0300\n"
+"POT-Creation-Date: 2019-05-20 01:31+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
-"X-Generator: Poedit 2.2.1\n"
 
 #: vshaurme/decorators.py:13
 #, python-format
 msgid ""
-"Please confirm your account first.Not receive the email?<a class=\"alert-link"
-"\" href=\"%s\">Resend Confirm Email</a>"
+"Please confirm your account first.Not receive the email?<a class=\"alert-"
+"link\" href=\"%s\">Resend Confirm Email</a>"
 msgstr ""
-"Пожалуйста, сначала подтвердите ваш аккаунт. Не получили запрос по почте? <a "
-"class=«alert-link» href=«%s»>Оправить на почту еще раз</a>"
+"Пожалуйста, сначала подтвердите ваш аккаунт. Не получили запрос по почте?"
+" <a class=«alert-link» href=«%s»>Оправить на почту еще раз</a>"
 
 #: vshaurme/settings.py:68
 msgid "Drop files here to upload"
@@ -40,8 +39,8 @@ msgstr "Вы не можете загрузить фал этого типа"
 #: vshaurme/settings.py:70
 msgid "File is too big {{filesize}}. Max filesize: {{maxFilesize}}MiB."
 msgstr ""
-"Файл слишком большой {{filesize}}. Максимальный размер файла: {{maxFilesize}}"
-"MiB."
+"Файл слишком большой {{filesize}}. Максимальный размер файла: "
+"{{maxFilesize}}MiB."
 
 #: vshaurme/settings.py:71
 msgid "Server error: {{statusCode}}"
@@ -55,13 +54,209 @@ msgstr "Ваш браузер слишком старый для этого де
 msgid "Your can't upload any more files."
 msgstr "Вы не можете загрузить больше файлов"
 
+#: vshaurme/blueprints/admin.py:52 vshaurme/blueprints/user.py:105
+msgid "Profile updated."
+msgstr "Профиль обновлен."
+
+#: vshaurme/blueprints/admin.py:71 vshaurme/blueprints/admin.py:92
+msgid "Permission denied."
+msgstr "Доступ запрещен."
+
+#: vshaurme/blueprints/admin.py:74
+msgid "Account blocked."
+msgstr "Учетная запись заблокирована."
+
+#: vshaurme/blueprints/admin.py:83
+msgid "Block canceled."
+msgstr "Блокировка отменена."
+
+#: vshaurme/blueprints/admin.py:95
+msgid "Account locked."
+msgstr "Учетная запись заблокирована."
+
+#: vshaurme/blueprints/admin.py:104
+msgid "Lock canceled."
+msgstr "Блокировка отменена."
+
+#: vshaurme/blueprints/admin.py:114 vshaurme/blueprints/main.py:394
+msgid "Tag deleted."
+msgstr "Тег удален."
+
+#: vshaurme/blueprints/auth.py:25
+msgid "Login success."
+msgstr "Успешный вход."
+
+#: vshaurme/blueprints/auth.py:28
+msgid "Your account is blocked."
+msgstr "Ваш аккаунт заблокирован."
+
+#: vshaurme/blueprints/auth.py:30
+msgid "Invalid email or password."
+msgstr "Неверный e-mail адрес или пароль."
+
+#: vshaurme/blueprints/auth.py:51
+msgid "Logout success."
+msgstr "Успешный выход."
+
+#: vshaurme/blueprints/auth.py:72 vshaurme/blueprints/user.py:178
+msgid "Confirm email sent, check your inbox."
+msgstr "Письмо с подтверждением отправлено, проверьте Входящие."
+
+#: vshaurme/blueprints/auth.py:84
+msgid "Account confirmed."
+msgstr "Аккаунт подтвержден."
+
+#: vshaurme/blueprints/auth.py:87 vshaurme/blueprints/user.py:190
+msgid "Invalid or expired token."
+msgstr "Неверный токен, либо время жизни токена истекло."
+
+#: vshaurme/blueprints/auth.py:99
+msgid "New email sent, check your inbox."
+msgstr "Новое письмо отправлено, проверьте Входящие."
+
+#: vshaurme/blueprints/auth.py:114
+msgid "Password reset email sent, check your inbox."
+msgstr "Письмо со сбросом пароля отправлено, проверьте Входящие."
+
+#: vshaurme/blueprints/auth.py:116
+msgid "Invalid email."
+msgstr "Некорректный e-mail адрес."
+
+#: vshaurme/blueprints/auth.py:133 vshaurme/blueprints/user.py:164
+msgid "Password updated."
+msgstr "Пароль обновлен."
+
+#: vshaurme/blueprints/auth.py:136
+msgid "Invalid or expired link."
+msgstr "Неверная ссылка, либо время жизни ссылки истекло."
+
+#: vshaurme/blueprints/main.py:47
+msgid "Enter keyword about photo, user or tag."
+msgstr "Введите ключевое слово фото, пользователя или тег."
+
+#: vshaurme/blueprints/main.py:87
+msgid "Notification archived."
+msgstr "Уведомление заархивировано."
+
+#: vshaurme/blueprints/main.py:97
+msgid "All notifications archived."
+msgstr "Все уведомления заархивированы."
+
+#: vshaurme/blueprints/main.py:157
+msgid "This is already the last one."
+msgstr "Это уже последнее фото."
+
+#: vshaurme/blueprints/main.py:168
+msgid "This is already the first one."
+msgstr "Это фото уже первое."
+
+#: vshaurme/blueprints/main.py:180
+msgid "Already collected."
+msgstr "Уже получено."
+
+#: vshaurme/blueprints/main.py:184
+msgid "Photo collected."
+msgstr "Фото получено."
+
+#: vshaurme/blueprints/main.py:195
+msgid "Not collect yet."
+msgstr "Еще не получено."
+
+#: vshaurme/blueprints/main.py:199
+msgid "Photo uncollected."
+msgstr "Фото не получено."
+
+#: vshaurme/blueprints/main.py:210
+msgid "Comment reported."
+msgstr "Комментарий отправлен."
+
+#: vshaurme/blueprints/main.py:221
+msgid "Photo reported."
+msgstr "Фото отправлено."
+
+#: vshaurme/blueprints/main.py:246
+msgid "Description updated."
+msgstr "Описание обновлено."
+
+#: vshaurme/blueprints/main.py:271
+msgid "Comment published."
+msgstr "Комментарий опубликован."
+
+#: vshaurme/blueprints/main.py:298
+msgid "Tag added."
+msgstr "Тег добавлен."
+
+#: vshaurme/blueprints/main.py:313
+msgid "Comment disabled"
+msgstr "Комментарий выключен."
+
+#: vshaurme/blueprints/main.py:316
+msgid "Comment enabled."
+msgstr "Комментарий включен."
+
+#: vshaurme/blueprints/main.py:340
+msgid "Photo deleted."
+msgstr "Фото удалено."
+
+#: vshaurme/blueprints/main.py:360
+msgid "Comment deleted."
+msgstr "Комментарий удален."
+
 #: vshaurme/blueprints/main.py:370
 msgid "time"
 msgstr "времени"
 
 #: vshaurme/blueprints/main.py:376
 msgid "collects"
-msgstr "собрать"
+msgstr ""
+
+#: vshaurme/blueprints/user.py:22
+msgid "Your account is locked."
+msgstr "Ваш аккаунт заблокирован."
+
+#: vshaurme/blueprints/user.py:51
+msgid "Already followed."
+msgstr "Уже отслеживается."
+
+#: vshaurme/blueprints/user.py:55
+msgid "User followed."
+msgstr "Пользователь отслеживается."
+
+#: vshaurme/blueprints/user.py:66
+msgid "Not follow yet."
+msgstr "Еще не отслеживается."
+
+#: vshaurme/blueprints/user.py:70
+msgid "User unfollowed."
+msgstr "Пользователь не отслеживается."
+
+#: vshaurme/blueprints/user.py:134
+msgid "Image uploaded, please crop."
+msgstr "Изображение загружено, пожалуйста, обрежьте его."
+
+#: vshaurme/blueprints/user.py:151
+msgid "Avatar updated."
+msgstr "Аватар обновлен."
+
+#: vshaurme/blueprints/user.py:167
+msgid "Old password is incorrect."
+msgstr "Старый пароль неверный."
+
+#: vshaurme/blueprints/user.py:187
+msgid "Email updated."
+msgstr "E-mail адрес обновлен."
+
+#: vshaurme/blueprints/user.py:203
+msgid "Notification settings updated."
+msgstr "Настройки уведомлений обновлены."
+
+#: vshaurme/blueprints/user.py:218
+msgid "Privacy settings updated."
+msgstr "Настройки конфиденциальности обновлены."
+
+#: vshaurme/blueprints/user.py:231
+msgid "Your are free, goodbye!"
+msgstr "Добби свободен, до свидания!"
 
 #: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
 #: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:38
@@ -81,6 +276,15 @@ msgstr "Активность"
 #: vshaurme/forms/admin.py:14
 msgid "Confirmed"
 msgstr "Подтвержденный"
+
+#: vshaurme/forms/admin.py:15 vshaurme/forms/auth.py:26
+#: vshaurme/forms/auth.py:39 vshaurme/forms/auth.py:47 vshaurme/forms/main.py:8
+#: vshaurme/forms/main.py:13 vshaurme/forms/main.py:18
+#: vshaurme/forms/user.py:19 vshaurme/forms/user.py:44
+#: vshaurme/forms/user.py:56 vshaurme/forms/user.py:63
+#: vshaurme/forms/user.py:68 vshaurme/forms/user.py:73
+msgid "Submit"
+msgstr "Отправить"
 
 #: vshaurme/forms/admin.py:25 vshaurme/forms/auth.py:34
 #: vshaurme/forms/user.py:23
@@ -145,12 +349,6 @@ msgstr "Город"
 #: vshaurme/forms/user.py:18 vshaurme/templates/admin/manage_user.html:50
 msgid "Bio"
 msgstr "Био"
-
-#: vshaurme/forms/user.py:19 vshaurme/forms/user.py:44
-#: vshaurme/forms/user.py:56 vshaurme/forms/user.py:63
-#: vshaurme/forms/user.py:68 vshaurme/forms/user.py:73
-msgid "Submit"
-msgstr "Отправить"
 
 #: vshaurme/forms/user.py:27 vshaurme/templates/base.html:51
 #: vshaurme/templates/main/upload.html:3 vshaurme/templates/main/upload.html:13
@@ -249,6 +447,27 @@ msgstr "Зарегистрироваться"
 #: vshaurme/templates/base.html:108
 msgid "Capture and share every wonderful moment."
 msgstr "Запечатлеть и поделиться каждым чудесным моментом."
+
+#: vshaurme/templates/macros.html:32
+#: vshaurme/templates/main/profile_popup.html:34
+msgid "Unfollow"
+msgstr "Отписаться"
+
+#: vshaurme/templates/macros.html:34
+#: vshaurme/templates/main/profile_popup.html:9
+msgid "Follow each other"
+msgstr "Подписаться друг на друга"
+
+#: vshaurme/templates/macros.html:41 vshaurme/templates/macros.html:52
+#: vshaurme/templates/main/profile_popup.html:39
+#: vshaurme/templates/main/profile_popup.html:46
+msgid "Follow"
+msgstr "Подписаться"
+
+#: vshaurme/templates/macros.html:43
+#: vshaurme/templates/main/profile_popup.html:11
+msgid "Follows you"
+msgstr "Подписались на вас"
 
 #: vshaurme/templates/admin/edit_profile.html:5
 #: vshaurme/templates/admin/edit_profile.html:16
@@ -392,6 +611,7 @@ msgstr "Содержимое"
 
 #: vshaurme/templates/admin/manage_comment.html:39
 #: vshaurme/templates/admin/manage_photo.html:40
+#: vshaurme/templates/main/_comment.html:34
 msgid "Author"
 msgstr "Автор"
 
@@ -630,13 +850,18 @@ msgid "comment"
 msgstr "Комментировать"
 
 #: vshaurme/templates/main/_comment.html:52
+#: vshaurme/templates/main/_comment.html:78
 msgid "Reply"
-msgstr "Ответить"
+msgstr "Ответ для"
 
 #: vshaurme/templates/main/_comment.html:67
 #: vshaurme/templates/main/photo.html:23
 msgid "Report"
 msgstr "Пожаловаться"
+
+#: vshaurme/templates/main/_comment.html:99
+msgid "Reply to"
+msgstr "Ответить"
 
 #: vshaurme/templates/main/_comment.html:100
 #: vshaurme/templates/main/_photo_sidebar.html:49
@@ -701,7 +926,7 @@ msgstr "Мои коллекции"
 
 #: vshaurme/templates/main/_sidebar.html:24
 msgid "Hot Tags"
-msgstr "Горячие тэги"
+msgstr "Популярные тэги"
 
 #: vshaurme/templates/main/collectors.html:5
 #: vshaurme/templates/main/collectors.html:19
@@ -769,14 +994,6 @@ msgstr "Удалит подтверждение"
 msgid "Are you sure you want to delete this item?"
 msgstr "Вы уверены, что хотите удалить?"
 
-#: vshaurme/templates/main/profile_popup.html:9
-msgid "Follow each other"
-msgstr "Подписаться друг на kheuf"
-
-#: vshaurme/templates/main/profile_popup.html:11
-msgid "Follows you"
-msgstr "Подписались на вас"
-
 #: vshaurme/templates/main/profile_popup.html:25
 msgid "Followers"
 msgstr "Подписчики"
@@ -784,15 +1001,6 @@ msgstr "Подписчики"
 #: vshaurme/templates/main/profile_popup.html:28
 msgid "Homepage"
 msgstr "Домашняя страница"
-
-#: vshaurme/templates/main/profile_popup.html:34
-msgid "Unfollow"
-msgstr "Отписаться"
-
-#: vshaurme/templates/main/profile_popup.html:39
-#: vshaurme/templates/main/profile_popup.html:46
-msgid "Follow"
-msgstr "Подписаться"
 
 #: vshaurme/templates/main/search.html:5 vshaurme/templates/main/search.html:9
 msgid "Search:"
@@ -884,7 +1092,8 @@ msgstr "Удалить аккаунт"
 
 #: vshaurme/templates/user/settings/change_avatar.html:17
 msgid ""
-"Your file's size must be less than 3 MB, the allowed formats are png and jpg."
+"Your file's size must be less than 3 MB, the allowed formats are png and "
+"jpg."
 msgstr "Ваш  файл должен быть меньше чем 3 MB, допустимые форматы png и jpg."
 
 #: vshaurme/templates/user/settings/edit_notification.html:4
@@ -902,3 +1111,4 @@ msgstr "Редактировать настройки конфиденциаль
 
 #~ msgid "Are you sure?"
 #~ msgstr "Вы уверены?"
+

@@ -23,7 +23,7 @@ class RegisterForm(FlaskForm):
     password = PasswordField(_l('Password'), validators=[
         DataRequired(), Length(8, 128), EqualTo(_l('password2'))])
     password2 = PasswordField(_l('Confirm password'), validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))
 
     def validate_email(self, field):
         if User.query.filter_by(email=field.data.lower()).first():
@@ -36,7 +36,7 @@ class RegisterForm(FlaskForm):
 
 class ForgetPasswordForm(FlaskForm):
     email = StringField(_l('Email'), validators=[DataRequired(), Length(1, 254), Email()])
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))
 
 
 class ResetPasswordForm(FlaskForm):
@@ -44,4 +44,4 @@ class ResetPasswordForm(FlaskForm):
     password = PasswordField(_l('Password'), validators=[
         DataRequired(), Length(8, 128), EqualTo(_l('password2'))])
     password2 = PasswordField(_l('Confirm password'), validators=[DataRequired()])
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))
