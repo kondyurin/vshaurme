@@ -25,8 +25,8 @@ msgid ""
 "Please confirm your account first.Not receive the email?<a class=\"alert-"
 "link\" href=\"%s\">Resend Confirm Email</a>"
 msgstr ""
-"Пожалуйста, сначала подтвердите ваш аккаунт. Не получили запрос по почте?"
-" <a class=«alert-link» href=«%s»>Оправить на почту еще раз</a>"
+"Пожалуйста, сначала подтвердите ваш аккаунт. Не получили запрос по почте?<a class=\"alert-"
+"link\" href=\"%s\">Оправить на почту еще раз</a>"
 
 #: vshaurme/settings.py:68
 msgid "Drop files here to upload"
