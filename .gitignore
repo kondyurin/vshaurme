@@ -48,7 +48,7 @@ coverage.xml
 .pytest_cache/
 
 # Translations
-*.mo
+# *.mo
 *.pot
 
 # Django stuff:
@@ -113,3 +113,5 @@ uploads/avatars/*
 !uploads/avatars/.gitkeep
 
 whooshee
+.vscode/
+.DS_Store
