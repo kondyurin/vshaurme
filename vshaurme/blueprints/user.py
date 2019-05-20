@@ -147,7 +147,11 @@ def crop_avatar():
         y = form.y.data
         w = form.w.data
         h = form.h.data
-        # TODO: crop avatar
+        raw_filename = current_user.avatar_raw
+        filenames = avatars.crop_avatar(raw_filename, x, y, w, h)
+        current_user.avatar_s = filenames[0]
+        current_user.avatar_m = filenames[1]
+        current_user.avatar_l = filenames[2]
         db.session.commit()
         flash(_l('Avatar updated.'), 'success')
     flash_errors(form)
