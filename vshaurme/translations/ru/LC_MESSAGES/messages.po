@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-22 00:09+0300\n"
+"POT-Creation-Date: 2019-05-22 01:03+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -40,6 +40,21 @@ msgstr "Сброс пароля"
 #: vshaurme/emails.py:24
 msgid "Change Email Confirm"
 msgstr "Подтверждение на изменение пароля"
+
+#: vshaurme/notifications.py:9
+#, python-format
+msgid "User <a href=\"%s\">%s</a> followed you."
+msgstr "Пользователь <a href=\"%s\">%s</a> подписался на вас."
+
+#: vshaurme/notifications.py:15
+#, python-format
+msgid "<a href=\"%s#comments\">This photo</a> has new comment/reply."
+msgstr "<a href=\"%s#comments\">К этому фото</a> появился новый комментарий/ответ."
+
+#: vshaurme/notifications.py:21
+#, python-format
+msgid "User <a href=\"%s\">%s</a> collected your <a href=\"%s\">photo</a>"
+msgstr "Пользователь <a href=\"%s\">%s</a> добавил ваше <a href=\"%s\">фото</a>"
 
 #: vshaurme/settings.py:68
 msgid "Drop files here to upload"
