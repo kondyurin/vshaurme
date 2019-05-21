@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-22 01:03+0300\n"
+"POT-Creation-Date: 2019-05-22 01:24+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -81,6 +81,11 @@ msgstr "Ваш браузер слишком старый для этого де
 #: vshaurme/settings.py:73
 msgid "Your can't upload any more files."
 msgstr "Вы не можете загрузить больше файлов"
+
+#: vshaurme/utils.py:97
+#, python-format
+msgid "Error in the %s field - %s"
+msgstr "Ошибка в %s поле - %s"
 
 #: vshaurme/blueprints/admin.py:52 vshaurme/blueprints/user.py:105
 msgid "Profile updated."
