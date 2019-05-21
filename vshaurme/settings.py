@@ -72,6 +72,8 @@ class BaseConfig:
     DROPZONE_BROWSER_UNSUPPORTED = _l("Your browser does not support drag'n'drop file uploads.")
     DROPZONE_MAX_FILE_EXCEED = _l("Your can't upload any more files.")
 
+    ROLLBAR_KEY = '5e56487c7d1642d686110e4a1a3254b8'
+    ROLLBAR_NAME = 'vshaurme'
 
 
 class DevelopmentConfig(BaseConfig):

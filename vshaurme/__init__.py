@@ -16,6 +16,10 @@ from vshaurme.extensions import bootstrap, db, login_manager, mail, dropzone,\
 from vshaurme.models import Role, User, Photo, Tag, Follow, Notification, Comment, Collect, Permission
 from vshaurme.settings import config
 
+import rollbar
+import rollbar.contrib.flask
+from flask import got_request_exception, current_app
+
 
 
 
@@ -32,6 +36,7 @@ def create_app(config_name=None):
     def before_request():
         g.locale = str(get_locale())
 
+    register_rollbar(app)
     register_extensions(app)
     register_blueprints(app)
     register_commands(app)
@@ -57,6 +62,21 @@ def register_extensions(app):
     # @babel.localeselector
     # def get_locale():
     #     return request.accept_languages.best_match(['en', 'ru'])
+
+
+def register_rollbar(app):
+    @app.before_first_request
+    def init_rollbar():
+        """init rollbar module"""
+        rollbar.init(
+            current_app.config['ROLLBAR_KEY'],
+            current_app.config['ROLLBAR_NAME'],
+            # server root directory, makes tracebacks prettier
+            root=os.path.dirname(os.path.realpath(__file__)),
+            # flask already sets up logging
+            allow_logging_basic_config=False)
+        # send exceptions from `app` to rollbar, using flask's signal system.
+        got_request_exception.connect(rollbar.contrib.flask.report_exception, app)
 
 
 def register_blueprints(app):
