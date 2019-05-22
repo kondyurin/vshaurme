@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-20 01:31+0300\n"
+"POT-Creation-Date: 2019-05-22 03:12+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -25,8 +25,36 @@ msgid ""
 "Please confirm your account first.Not receive the email?<a class=\"alert-"
 "link\" href=\"%s\">Resend Confirm Email</a>"
 msgstr ""
-"Пожалуйста, сначала подтвердите ваш аккаунт. Не получили запрос по почте?"
-" <a class=«alert-link» href=«%s»>Оправить на почту еще раз</a>"
+"Пожалуйста, сначала подтвердите ваш аккаунт. Не получили запрос по "
+"почте?<a class=\"alert-link\" href=\"%s\">Оправить на почту еще раз</a>"
+
+#: vshaurme/emails.py:16
+msgid "Email Confirm"
+msgstr "Письмо подтверждения"
+
+#: vshaurme/emails.py:20 vshaurme/templates/auth/reset_password.html:4
+#: vshaurme/templates/auth/reset_password.html:8
+msgid "Password Reset"
+msgstr "Сброс пароля"
+
+#: vshaurme/emails.py:24
+msgid "Change Email Confirm"
+msgstr "Подтверждение на изменение пароля"
+
+#: vshaurme/notifications.py:9
+#, python-format
+msgid "User <a href=\"%s\">%s</a> followed you."
+msgstr "Пользователь <a href=\"%s\">%s</a> подписался на вас."
+
+#: vshaurme/notifications.py:15
+#, python-format
+msgid "<a href=\"%s#comments\">This photo</a> has new comment/reply."
+msgstr "<a href=\"%s#comments\">К этому фото</a> появился новый комментарий/ответ."
+
+#: vshaurme/notifications.py:21
+#, python-format
+msgid "User <a href=\"%s\">%s</a> collected your <a href=\"%s\">photo</a>"
+msgstr "Пользователь <a href=\"%s\">%s</a> добавил ваше <a href=\"%s\">фото</a>"
 
 #: vshaurme/settings.py:68
 msgid "Drop files here to upload"
@@ -53,6 +81,11 @@ msgstr "Ваш браузер слишком старый для этого де
 #: vshaurme/settings.py:73
 msgid "Your can't upload any more files."
 msgstr "Вы не можете загрузить больше файлов"
+
+#: vshaurme/utils.py:97
+#, python-format
+msgid "Error in the %s field - %s"
+msgstr "Ошибка в %s поле - %s"
 
 #: vshaurme/blueprints/admin.py:52 vshaurme/blueprints/user.py:105
 msgid "Profile updated."
@@ -98,7 +131,7 @@ msgstr "Неверный e-mail адрес или пароль."
 msgid "Logout success."
 msgstr "Успешный выход."
 
-#: vshaurme/blueprints/auth.py:72 vshaurme/blueprints/user.py:178
+#: vshaurme/blueprints/auth.py:72 vshaurme/blueprints/user.py:182
 msgid "Confirm email sent, check your inbox."
 msgstr "Письмо с подтверждением отправлено, проверьте Входящие."
 
@@ -106,7 +139,7 @@ msgstr "Письмо с подтверждением отправлено, пр�
 msgid "Account confirmed."
 msgstr "Аккаунт подтвержден."
 
-#: vshaurme/blueprints/auth.py:87 vshaurme/blueprints/user.py:190
+#: vshaurme/blueprints/auth.py:87 vshaurme/blueprints/user.py:194
 msgid "Invalid or expired token."
 msgstr "Неверный токен, либо время жизни токена истекло."
 
@@ -122,7 +155,7 @@ msgstr "Письмо со сбросом пароля отправлено, пр
 msgid "Invalid email."
 msgstr "Некорректный e-mail адрес."
 
-#: vshaurme/blueprints/auth.py:133 vshaurme/blueprints/user.py:164
+#: vshaurme/blueprints/auth.py:133 vshaurme/blueprints/user.py:168
 msgid "Password updated."
 msgstr "Пароль обновлен."
 
@@ -234,27 +267,27 @@ msgstr "Пользователь не отслеживается."
 msgid "Image uploaded, please crop."
 msgstr "Изображение загружено, пожалуйста, обрежьте его."
 
-#: vshaurme/blueprints/user.py:151
+#: vshaurme/blueprints/user.py:155
 msgid "Avatar updated."
 msgstr "Аватар обновлен."
 
-#: vshaurme/blueprints/user.py:167
+#: vshaurme/blueprints/user.py:171
 msgid "Old password is incorrect."
 msgstr "Старый пароль неверный."
 
-#: vshaurme/blueprints/user.py:187
+#: vshaurme/blueprints/user.py:191
 msgid "Email updated."
 msgstr "E-mail адрес обновлен."
 
-#: vshaurme/blueprints/user.py:203
+#: vshaurme/blueprints/user.py:207
 msgid "Notification settings updated."
 msgstr "Настройки уведомлений обновлены."
 
-#: vshaurme/blueprints/user.py:218
+#: vshaurme/blueprints/user.py:222
 msgid "Privacy settings updated."
 msgstr "Настройки конфиденциальности обновлены."
 
-#: vshaurme/blueprints/user.py:231
+#: vshaurme/blueprints/user.py:235
 msgid "Your are free, goodbye!"
 msgstr "Добби свободен, до свидания!"
 
@@ -399,6 +432,10 @@ msgstr "Публиковать мою коллекцию"
 #: vshaurme/forms/user.py:77
 msgid "Wrong username."
 msgstr "Неверное имя пользователя"
+
+#: vshaurme/templates/base.html:9 vshaurme/templates/main/index.html:95
+msgid "VShaurme"
+msgstr "ВШаурме"
 
 #: vshaurme/templates/base.html:33 vshaurme/templates/main/index.html:5
 msgid "Home"
@@ -751,7 +788,7 @@ msgstr "Нет пользователей."
 
 #: vshaurme/templates/auth/login.html:14
 msgid "Log in to Vshaurme"
-msgstr "Авторизоваться во Vshaurme"
+msgstr "Авторизоваться во ВШаурме"
 
 #: vshaurme/templates/auth/login.html:18
 msgid "Register new account"
@@ -768,7 +805,7 @@ msgstr "Регистрация"
 
 #: vshaurme/templates/auth/register.html:14
 msgid "Welcome to Vshaurme!"
-msgstr "Добро пожаловать во Vshaurme!"
+msgstr "Добро пожаловать во ВШаурме!"
 
 #: vshaurme/templates/auth/register.html:18
 msgid "Already have an account? "
@@ -777,11 +814,6 @@ msgstr "Аккаунт уже есть?"
 #: vshaurme/templates/auth/register.html:18
 msgid "Click here to log in."
 msgstr "Кликните, чтобы авторизоваться"
-
-#: vshaurme/templates/auth/reset_password.html:4
-#: vshaurme/templates/auth/reset_password.html:8
-msgid "Password Reset"
-msgstr "Сброс пароля"
 
 #: vshaurme/templates/emails/change_email.html:1
 #: vshaurme/templates/emails/confirm.html:1
