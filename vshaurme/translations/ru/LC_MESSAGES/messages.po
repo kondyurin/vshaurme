@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-22 01:24+0300\n"
+"POT-Creation-Date: 2019-05-22 03:12+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -433,6 +433,10 @@ msgstr "Публиковать мою коллекцию"
 msgid "Wrong username."
 msgstr "Неверное имя пользователя"
 
+#: vshaurme/templates/base.html:9 vshaurme/templates/main/index.html:95
+msgid "VShaurme"
+msgstr "ВШаурме"
+
 #: vshaurme/templates/base.html:33 vshaurme/templates/main/index.html:5
 msgid "Home"
 msgstr "Домой"
@@ -784,7 +788,7 @@ msgstr "Нет пользователей."
 
 #: vshaurme/templates/auth/login.html:14
 msgid "Log in to Vshaurme"
-msgstr "Авторизоваться во Vshaurme"
+msgstr "Авторизоваться во ВШаурме"
 
 #: vshaurme/templates/auth/login.html:18
 msgid "Register new account"
@@ -801,7 +805,7 @@ msgstr "Регистрация"
 
 #: vshaurme/templates/auth/register.html:14
 msgid "Welcome to Vshaurme!"
-msgstr "Добро пожаловать во Vshaurme!"
+msgstr "Добро пожаловать во ВШаурме!"
 
 #: vshaurme/templates/auth/register.html:18
 msgid "Already have an account? "
