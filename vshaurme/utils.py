@@ -9,6 +9,7 @@ except ImportError:
 import PIL
 from PIL import Image
 from flask import current_app, request, url_for, redirect, flash
+from flask_babel import lazy_gettext as _l
 from itsdangerous import BadSignature, SignatureExpired
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 
@@ -93,7 +94,7 @@ def redirect_back(default='main.index', **kwargs):
 def flash_errors(form):
     for field, errors in form.errors.items():
         for error in errors:
-            flash(u"Error in the %s field - %s" % (
+            flash(_l(u"Error in the %s field - %s") % (
                 getattr(form, field).label.text,
                 error
             ))
