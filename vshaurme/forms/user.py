@@ -25,10 +25,10 @@ class EditProfileForm(FlaskForm):
 
 class UploadAvatarForm(FlaskForm):
     image = FileField(_l('Upload'), validators=[
-        FileRequired(),
+        FileRequired(_l('Please choose a file')),
         FileAllowed(['jpg', 'png'], _l('The file format should be .jpg or .png.'))
     ])
-    submit = SubmitField()
+    submit = SubmitField(_l('Submit'))
 
 
 class CropAvatarForm(FlaskForm):
@@ -45,7 +45,7 @@ class ChangeEmailForm(FlaskForm):
 
     def validate_email(self, field):
         if User.query.filter_by(email=field.data.lower()).first():
-            raise ValidationError('The email is already in use.')
+            raise ValidationError(_l('The email is already in use.'))
 
 
 class ChangePasswordForm(FlaskForm):
