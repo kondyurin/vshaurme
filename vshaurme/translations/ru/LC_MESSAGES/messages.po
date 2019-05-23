@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-22 03:12+0300\n"
+"POT-Creation-Date: 2019-05-22 09:47+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -241,7 +241,7 @@ msgstr "времени"
 
 #: vshaurme/blueprints/main.py:376
 msgid "collects"
-msgstr ""
+msgstr "коллекциям"
 
 #: vshaurme/blueprints/user.py:22
 msgid "Your account is locked."
@@ -313,9 +313,10 @@ msgstr "Подтвержденный"
 #: vshaurme/forms/admin.py:15 vshaurme/forms/auth.py:26
 #: vshaurme/forms/auth.py:39 vshaurme/forms/auth.py:47 vshaurme/forms/main.py:8
 #: vshaurme/forms/main.py:13 vshaurme/forms/main.py:18
-#: vshaurme/forms/user.py:19 vshaurme/forms/user.py:44
-#: vshaurme/forms/user.py:56 vshaurme/forms/user.py:63
-#: vshaurme/forms/user.py:68 vshaurme/forms/user.py:73
+#: vshaurme/forms/user.py:19 vshaurme/forms/user.py:31
+#: vshaurme/forms/user.py:44 vshaurme/forms/user.py:56
+#: vshaurme/forms/user.py:63 vshaurme/forms/user.py:68
+#: vshaurme/forms/user.py:73
 msgid "Submit"
 msgstr "Отправить"
 
@@ -325,6 +326,7 @@ msgid "The username is already in use."
 msgstr "Имя пользователя уже используется"
 
 #: vshaurme/forms/admin.py:29 vshaurme/forms/auth.py:30
+#: vshaurme/forms/user.py:48
 msgid "The email is already in use."
 msgstr "Почта уже используется"
 
@@ -388,6 +390,10 @@ msgstr "Био"
 #: vshaurme/templates/user/index.html:19
 msgid "Upload"
 msgstr "Загрузить"
+
+#: vshaurme/forms/user.py:28
+msgid "Please choose a file"
+msgstr ""
 
 #: vshaurme/forms/user.py:29
 msgid "The file format should be .jpg or .png."

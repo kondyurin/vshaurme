@@ -4,7 +4,7 @@ from flask import render_template, flash, redirect, url_for, current_app, \
     send_from_directory, request, abort, Blueprint
 from flask_login import login_required, current_user
 from sqlalchemy.sql.expression import func
-from flask_babel import lazy_gettext as _l
+from flask_babel import _, lazy_gettext as _l
 
 from vshaurme.decorators import confirm_required, permission_required
 from vshaurme.extensions import db
@@ -373,7 +373,7 @@ def show_tag(tag_id, order):
 
     if order == 'by_collects':
         photos.sort(key=lambda x: len(x.collectors), reverse=True)
-        order_rule = _l('collects')
+        order_rule = _('collects')
     return render_template('main/tag.html', tag=tag, pagination=pagination, photos=photos, order_rule=order_rule)
 
 
