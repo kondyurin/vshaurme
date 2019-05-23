@@ -33,7 +33,7 @@ def fake_user(count=10):
                     username='{0}'.format(fake.user_name()),
                     bio = 'My name is',
                     location='{0}'.format(fake.city()),
-                    website='{0}'.format(fake.uri()),
+                    website='{0}'.format(fake.url()),
                     email='{0}'.format(fake.ascii_free_email()))
         user.set_password('123456')
         db.session.add(user)
