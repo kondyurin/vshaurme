@@ -7,11 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2019-05-23 14:19+0300\n"
-=======
-"POT-Creation-Date: 2019-05-22 09:47+0300\n"
->>>>>>> 78b7612e98226e971f01de289ad44babc8168c1a
+"POT-Creation-Date: 2019-05-23 20:47+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -243,7 +239,7 @@ msgstr "Комментарий удален."
 msgid "time"
 msgstr "времени"
 
-#: vshaurme/blueprints/main.py:376
+#: vshaurme/blueprints/main.py:376 vshaurme/templates/main/tag.html:24
 msgid "collects"
 msgstr "коллекциям"
 
@@ -341,7 +337,7 @@ msgstr "Пароль"
 
 #: vshaurme/forms/auth.py:13
 msgid "Remember me"
-msgstr "Напомнить мне"
+msgstr "Запомнить меня"
 
 #: vshaurme/forms/auth.py:14
 msgid "Log in"
