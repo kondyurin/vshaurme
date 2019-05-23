@@ -21,15 +21,18 @@ avatars = Avatars()
 csrf = CSRFProtect()
 babel = Babel()
 
+
 @login_manager.user_loader
 def load_user(user_id):
     from vshaurme.models import User
     user = User.query.get(int(user_id))
     return user
 
+
 @babel.localeselector
 def get_locale():
     return request.accept_languages.best_match(current_app.config['LANGUAGES'])
+
 
 login_manager.login_view = 'auth.login'
 # login_manager.login_message = 'Your custom message'
