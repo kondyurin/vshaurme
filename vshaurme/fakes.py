@@ -9,7 +9,7 @@ from sqlalchemy.exc import IntegrityError
 from vshaurme.extensions import db
 from vshaurme.models import User, Photo, Tag, Comment, Notification
 
-fake = Faker()
+fake = Faker("ru_RU")
 
 
 def fake_admin():
@@ -28,13 +28,13 @@ def fake_admin():
 
 def fake_user(count=10):
     for user_number in range(count):
-        user = User(name='Grey Li',
+        user = User(name='{0}'.format(fake.first_name()),
                     confirmed=True,
-                    username='greyli{0}'.format(user_number),
-                    bio='My name is Grey Li.',
-                    location='Longon',
-                    website='http://greyli.com',
-                    email='admin{0}@helloflask.com'.format(user_number))
+                    username='{0}'.format(fake.user_name()),
+                    bio = 'My name is',
+                    location='{0}'.format(fake.city()),
+                    website='{0}'.format(fake.uri()),
+                    email='{0}'.format(fake.ascii_free_email()))
         user.set_password('123456')
         db.session.add(user)
         try:
@@ -52,7 +52,7 @@ def fake_follow(count=30):
 
 def fake_tag(count=20):
     for tag_number in range(count):
-        tag = Tag(name='my_tag{0}'.format(tag_number))
+        tag = Tag(name='{0}'.format(fake.color_name()))
         db.session.add(tag)
         try:
             db.session.commit()
@@ -64,9 +64,10 @@ def fake_photo(count=30):
     # photos
     upload_path = current_app.config['VSHAURME_UPLOAD_PATH']
     for photo_number in range(count):
+        random_color = tuple([random.randint(0, 255) for i in range(0,3)])
+        img = Image.new("RGB", (100, 100), random_color)
         filename = 'random_%d.jpg' % photo_number
-        # TODO: generate image
-
+        img.save('{0}/{1}'.format(upload_path, filename))
         photo = Photo(
             description=fake.text(),
             filename=filename,
