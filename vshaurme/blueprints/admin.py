@@ -14,6 +14,7 @@ admin_bp = Blueprint('admin', __name__)
 
 @admin_bp.route('/')
 @login_required
+@permission_required('MODERATE')
 def index():
     user_count = User.query.count()
     locked_user_count = User.query.filter_by(locked=True).count()
@@ -117,6 +118,7 @@ def delete_tag(tag_id):
 
 @admin_bp.route('/manage/user')
 @login_required
+@permission_required('MODERATE')
 def manage_user():
     filter_rule = request.args.get('filter', 'all')  # 'all', 'locked', 'blocked', 'administrator', 'moderator'
     page = request.args.get('page', 1, type=int)
@@ -143,6 +145,7 @@ def manage_user():
 @admin_bp.route('/manage/photo', defaults={'order': 'by_flag'})
 @admin_bp.route('/manage/photo/<order>')
 @login_required
+@permission_required('MODERATE')
 def manage_photo(order):
     page = request.args.get('page', 1, type=int)
     per_page = current_app.config['VSHAURME_MANAGE_PHOTO_PER_PAGE']
@@ -158,6 +161,7 @@ def manage_photo(order):
 
 @admin_bp.route('/manage/tag')
 @login_required
+@permission_required('MODERATE')
 def manage_tag():
     page = request.args.get('page', 1, type=int)
     per_page = current_app.config['VSHAURME_MANAGE_TAG_PER_PAGE']
@@ -169,6 +173,7 @@ def manage_tag():
 @admin_bp.route('/manage/comment', defaults={'order': 'by_flag'})
 @admin_bp.route('/manage/comment/<order>')
 @login_required
+@permission_required('MODERATE')
 def manage_comment(order):
     page = request.args.get('page', 1, type=int)
     per_page = current_app.config['VSHAURME_MANAGE_COMMENT_PER_PAGE']
