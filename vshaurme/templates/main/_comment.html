@@ -31,7 +31,7 @@
                             {{ comment.author.name }}
                         </a>
                         {% if comment.author == photo.author %}
-                            <span class="badge badge-light">Author</span>
+                            <span class="badge badge-light">{{ _('Author') }}</span>
                         {% endif %}
                         <small data-toggle="tooltip" data-placement="top" data-timestamp="{{ comment.timestamp }}"
                                data-delay="500">
@@ -75,7 +75,7 @@
                     </h6>
                     <p>
                         {% if comment.replied %}
-                            Reply
+                            {{ _('Reply') }}
                             <a href="{{ url_for('user.index', username=comment.replied.author.username) }}">{{ comment.replied.author.name }}</a>:
                         {% endif %}
                         {{ comment.body }}
@@ -96,7 +96,7 @@
             {% if current_user.can('COMMENT') %}
                 {% if request.args.get('reply') %}
                     <div class="alert alert-dark">
-                        Reply to {{ request.args.get('author') }}:
+                        {{ _('Reply to') }} {{ request.args.get('author') }}:
                         <a class="float-right" href="{{ url_for('.show_photo', photo_id=photo.id) }}">{{ _('Cancel') }}</a>
                     </div>
                 {% endif %}

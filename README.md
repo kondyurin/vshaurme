@@ -1,6 +1,6 @@
 # VShaurme
 
-Каркас для социальной сети «ВШаурме»
+[alpden.pythonanywhere.com](http://alpden.pythonanywhere.com)
 
 ## Как установить локально
 
