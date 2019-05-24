@@ -139,7 +139,10 @@ class User(db.Model, UserMixin):
             db.session.commit()
 
     def unfollow(self, user):
-        pass
+        follow = Follow.query.with_parent(self).filter_by(followed_id=user.id).first()
+        if follow:
+            db.session.delete(follow)
+            db.session.commit()
 
     def is_following(self, user):
         if user.id is None:  # when follow self, user.id will be None
