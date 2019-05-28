@@ -28,13 +28,13 @@ def fake_admin():
 
 def fake_user(count=10):
     for user_number in range(count):
-        user = User(name='{0}'.format(fake.first_name()),
+        user = User(name=fake.first_name(),
                     confirmed=True,
-                    username='{0}'.format(fake.user_name()),
+                    username=fake.user_name(),
                     bio = 'My name is',
-                    location='{0}'.format(fake.city()),
-                    website='{0}'.format(fake.url()),
-                    email='{0}'.format(fake.ascii_free_email()))
+                    location=fake.city(),
+                    website=fake.url(),
+                    email=fake.ascii_free_email())
         user.set_password('123456')
         db.session.add(user)
         try:
