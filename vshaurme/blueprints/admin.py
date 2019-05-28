@@ -33,6 +33,7 @@ def index():
 @admin_bp.route('/profile/<int:user_id>', methods=['GET', 'POST'])
 @login_required
 @admin_required
+@permission_required('MODERATE')
 def edit_profile_admin(user_id):
     user = User.query.get_or_404(user_id)
     form = EditProfileAdminForm(user=user)
@@ -66,6 +67,7 @@ def edit_profile_admin(user_id):
 
 @admin_bp.route('/block/user/<int:user_id>', methods=['POST'])
 @login_required
+@permission_required('MODERATE')
 def block_user(user_id):
     user = User.query.get_or_404(user_id)
     if user.role.name in ['Administrator', 'Moderator']:
@@ -78,6 +80,7 @@ def block_user(user_id):
 
 @admin_bp.route('/unblock/user/<int:user_id>', methods=['POST'])
 @login_required
+@permission_required('MODERATE')
 def unblock_user(user_id):
     user = User.query.get_or_404(user_id)
     user.unblock()
@@ -87,6 +90,7 @@ def unblock_user(user_id):
 
 @admin_bp.route('/lock/user/<int:user_id>', methods=['POST'])
 @login_required
+@permission_required('MODERATE')
 def lock_user(user_id):
     user = User.query.get_or_404(user_id)
     if user.role.name in ['Administrator', 'Moderator']:
@@ -99,6 +103,7 @@ def lock_user(user_id):
 
 @admin_bp.route('/unlock/user/<int:user_id>', methods=['POST'])
 @login_required
+@permission_required('MODERATE')
 def unlock_user(user_id):
     user = User.query.get_or_404(user_id)
     user.unlock()
@@ -108,6 +113,7 @@ def unlock_user(user_id):
 
 @admin_bp.route('/delete/tag/<int:tag_id>', methods=['GET', 'POST'])
 @login_required
+@permission_required('MODERATE')
 def delete_tag(tag_id):
     tag = Tag.query.get_or_404(tag_id)
     db.session.delete(tag)
