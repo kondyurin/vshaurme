@@ -52,7 +52,7 @@ def fake_follow(count=30):
 
 def fake_tag(count=20):
     for tag_number in range(count):
-        tag = Tag(name='{0}'.format(fake.color_name()))
+        tag = Tag(name=fake.color_name())
         db.session.add(tag)
         try:
             db.session.commit()
