@@ -56,7 +56,7 @@ class ChangePasswordForm(FlaskForm):
                 EqualTo(_l('password2')), 
                 Regexp(r'[A-Z]', message=_l('Password should contain at least 1 uppercase letter')),
                 Regexp(r'[a-z]', message=_l('Password should contain at least 1 lowerrcase letter')),
-                Regexp(r'[d]', message=_l('Password should contain at least 1 digit letter'))
+                Regexp(r'[d]', message=_l('Password should contain at least 1 digit'))
                 ])
     password2 = PasswordField(_l('Confirm Password'), validators=[DataRequired()])
     submit = SubmitField(_l('Submit'))

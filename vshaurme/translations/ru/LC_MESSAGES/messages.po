@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-05-29 09:13+0300\n"
+"POT-Creation-Date: 2019-05-29 09:44+0300\n"
 "PO-Revision-Date: 2019-05-19 19:31+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
@@ -291,9 +291,9 @@ msgstr "Настройки конфиденциальности обновлен
 msgid "Your are free, goodbye!"
 msgstr "Добби свободен, до свидания!"
 
-#: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:12
-#: vshaurme/forms/auth.py:20 vshaurme/forms/auth.py:45
-#: vshaurme/forms/auth.py:50 vshaurme/templates/admin/manage_user.html:101
+#: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:11
+#: vshaurme/forms/auth.py:19 vshaurme/forms/auth.py:44
+#: vshaurme/forms/auth.py:49 vshaurme/templates/admin/manage_user.html:101
 #: vshaurme/templates/user/_header.html:56
 msgid "Email"
 msgstr "Почта"
@@ -310,8 +310,8 @@ msgstr "Активность"
 msgid "Confirmed"
 msgstr "Подтвержденный"
 
-#: vshaurme/forms/admin.py:15 vshaurme/forms/auth.py:33
-#: vshaurme/forms/auth.py:46 vshaurme/forms/auth.py:54 vshaurme/forms/main.py:8
+#: vshaurme/forms/admin.py:15 vshaurme/forms/auth.py:32
+#: vshaurme/forms/auth.py:45 vshaurme/forms/auth.py:53 vshaurme/forms/main.py:8
 #: vshaurme/forms/main.py:13 vshaurme/forms/main.py:18
 #: vshaurme/forms/user.py:19 vshaurme/forms/user.py:31
 #: vshaurme/forms/user.py:44 vshaurme/forms/user.py:62
@@ -320,61 +320,61 @@ msgstr "Подтвержденный"
 msgid "Submit"
 msgstr "Отправить"
 
-#: vshaurme/forms/admin.py:25 vshaurme/forms/auth.py:41
+#: vshaurme/forms/admin.py:25 vshaurme/forms/auth.py:40
 #: vshaurme/forms/user.py:23
 msgid "The username is already in use."
 msgstr "Имя пользователя уже используется"
 
-#: vshaurme/forms/admin.py:29 vshaurme/forms/auth.py:37
+#: vshaurme/forms/admin.py:29 vshaurme/forms/auth.py:36
 #: vshaurme/forms/user.py:48
 msgid "The email is already in use."
 msgstr "Почта уже используется"
 
-#: vshaurme/forms/auth.py:13 vshaurme/forms/auth.py:24
-#: vshaurme/forms/auth.py:51
+#: vshaurme/forms/auth.py:12 vshaurme/forms/auth.py:23
+#: vshaurme/forms/auth.py:50
 msgid "Password"
 msgstr "Пароль"
 
-#: vshaurme/forms/auth.py:14
+#: vshaurme/forms/auth.py:13
 msgid "Remember me"
 msgstr "Запомнить меня"
 
-#: vshaurme/forms/auth.py:15
+#: vshaurme/forms/auth.py:14
 msgid "Log in"
 msgstr "Авторизоваться"
 
-#: vshaurme/forms/auth.py:19 vshaurme/forms/user.py:12
+#: vshaurme/forms/auth.py:18 vshaurme/forms/user.py:12
 #: vshaurme/templates/admin/manage_tag.html:23
 msgid "Name"
 msgstr "Имя"
 
-#: vshaurme/forms/auth.py:21 vshaurme/forms/user.py:13
+#: vshaurme/forms/auth.py:20 vshaurme/forms/user.py:13
 #: vshaurme/forms/user.py:78
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: vshaurme/forms/auth.py:23 vshaurme/forms/user.py:15
+#: vshaurme/forms/auth.py:22 vshaurme/forms/user.py:15
 msgid "The username should contain only a-z, A-Z and 0-9."
 msgstr "Имя пользователя должно. Содержать только  буквы a-z, A-Z и цифры 0-9."
 
-#: vshaurme/forms/auth.py:27 vshaurme/forms/auth.py:52
+#: vshaurme/forms/auth.py:26 vshaurme/forms/auth.py:51
 #: vshaurme/forms/user.py:56
 msgid "password2"
 msgstr ""
 
-#: vshaurme/forms/auth.py:28 vshaurme/forms/user.py:57
+#: vshaurme/forms/auth.py:27 vshaurme/forms/user.py:57
 msgid "Password should contain at least 1 uppercase letter"
 msgstr "Пароль должен содержать минимум 1 заглавную букву"
 
-#: vshaurme/forms/auth.py:29 vshaurme/forms/user.py:58
+#: vshaurme/forms/auth.py:28 vshaurme/forms/user.py:58
 msgid "Password should contain at least 1 lowerrcase letter"
 msgstr "Пароль должен содержать минимум 1 строчную букву"
 
-#: vshaurme/forms/auth.py:30 vshaurme/forms/user.py:59
-msgid "Password should contain at least 1 digit letter"
+#: vshaurme/forms/auth.py:29 vshaurme/forms/user.py:59
+msgid "Password should contain at least 1 digit"
 msgstr "Пароль должен содержать минимум 1 цифру"
 
-#: vshaurme/forms/auth.py:32 vshaurme/forms/auth.py:53
+#: vshaurme/forms/auth.py:31 vshaurme/forms/auth.py:52
 msgid "Confirm password"
 msgstr "Подтвердить пароль"
 
@@ -1167,4 +1167,7 @@ msgstr "Редактировать настройки конфиденциаль
 
 #~ msgid "Are you sure?"
 #~ msgstr "Вы уверены?"
+
+#~ msgid "Password should contain at least 1 digit letter"
+#~ msgstr "Пароль должен содержать минимум 1 цифру"
 
