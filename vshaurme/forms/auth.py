@@ -21,7 +21,13 @@ class RegisterForm(FlaskForm):
                                                    Regexp('^[a-zA-Z0-9]*$',
                                                           message=_l('The username should contain only a-z, A-Z and 0-9.'))])
     password = PasswordField(_l('Password'), validators=[
-        DataRequired(), Length(8, 128), EqualTo(_l('password2'))])
+                DataRequired(), 
+                Length(10, 128), 
+                EqualTo(_l('password2')), 
+                Regexp(r'[A-Z]', message=_l('Password should contain at least 1 uppercase letter')),
+                Regexp(r'[a-z]', message=_l('Password should contain at least 1 lowerrcase letter')),
+                Regexp(r'[d]', message=_l('Password should contain at least 1 digit'))
+                ])
     password2 = PasswordField(_l('Confirm password'), validators=[DataRequired()])
     submit = SubmitField(_l('Submit'))
 
@@ -32,7 +38,7 @@ class RegisterForm(FlaskForm):
     def validate_username(self, field):
         if User.query.filter_by(username=field.data).first():
             raise ValidationError(_l('The username is already in use.'))
-
+    
 
 class ForgetPasswordForm(FlaskForm):
     email = StringField(_l('Email'), validators=[DataRequired(), Length(1, 254), Email()])
