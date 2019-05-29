@@ -51,7 +51,13 @@ class ChangeEmailForm(FlaskForm):
 class ChangePasswordForm(FlaskForm):
     old_password = PasswordField(_l('Old Password'), validators=[DataRequired()])
     password = PasswordField(_l('New Password'), validators=[
-        DataRequired(), Length(8, 128), EqualTo('password2')])
+                DataRequired(), 
+                Length(10, 128), 
+                EqualTo(_l('password2')), 
+                Regexp(r'[A-Z]', message=_l('Password should contain at least 1 uppercase letter')),
+                Regexp(r'[a-z]', message=_l('Password should contain at least 1 lowerrcase letter')),
+                Regexp(r'[d]', message=_l('Password should contain at least 1 digit letter'))
+                ])
     password2 = PasswordField(_l('Confirm Password'), validators=[DataRequired()])
     submit = SubmitField(_l('Submit'))
 
