@@ -1,5 +1,8 @@
 import os
 import uuid
+import requests
+from lxml import etree
+from transliterate import translit
 
 try:
     from urlparse import urlparse, urljoin
@@ -98,3 +101,41 @@ def flash_errors(form):
                 getattr(form, field).label.text,
                 error
             ))
+
+
+def get_eng_swear_words():
+    url = 'https://www.noswearing.com/dictionary/'
+    alphabet = list('abcdefghijklmnopqrstuvwxyz')
+    result = []
+    for letter in alphabet:
+        try:
+            response = requests.get('{}{}'.format(url, letter))
+        except request.exeptions.HTTPError:
+            return None
+        dom = etree.HTML(response.text)
+        swear_words = dom.xpath('//a/@name')
+        for swear_word in swear_words:
+            if not swear_word is 'top':
+                result.append(swear_word.replace("\\'", ''))  # TODO regex symbols
+    return result
+
+
+def get_rus_swear_words(word):
+    translit_word = translit(word, 'ru')
+    payload = {
+        'txt': '{}'.format(translit_word),
+        'lang': 'rus'
+    }
+    url = "https://tt-api.tech/1.0/profanity"
+    headers = {'authorization': 'Token {}'.format(current_app.config['TT_API_KEY'])}
+    response = requests.get(url, params=payload, headers=headers)
+    data = response.json()
+    swear_level = data['result']['level']
+    return swear_level
+
+
+def write_swear_words():
+    path = current_app.config['SWEAR_WORDS']
+    with open(path, 'w') as f:
+        for line in get_eng_swear_words():
+            f.write('{}\n'.format(line))
