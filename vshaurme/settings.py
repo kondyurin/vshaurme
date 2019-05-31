@@ -75,6 +75,10 @@ class BaseConfig:
     ROLLBAR_KEY = '5e56487c7d1642d686110e4a1a3254b8'
     ROLLBAR_NAME = 'vshaurme'
 
+    SWEAR_WORDS = os.path.join(basedir, 'uploads', 'swear_words.txt')
+
+    TT_API_TOKEN = 'vBfk5iOxKrS2ppHrdmWnmPhNl2bz9cJCJ3X'
+    
 
 class DevelopmentConfig(BaseConfig):
     SQLALCHEMY_DATABASE_URI = \
