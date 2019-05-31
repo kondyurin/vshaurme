@@ -112,7 +112,8 @@ def get_eng_swear_words():
     for letter in alphabet:
         try:
             response = requests.get('{}{}'.format(url, letter))
-        except request.exeptions.HTTPError:
+        # except request.exeptions.HTTPError:
+        except OSError:
             return None
         dom = etree.HTML(response.text)
         swear_words = dom.xpath('//a/@name')
