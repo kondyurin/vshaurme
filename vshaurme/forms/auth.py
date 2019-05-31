@@ -9,6 +9,7 @@ from flask_babel import lazy_gettext as _l
 
 from vshaurme.models import User
 from vshaurme.utils import get_rus_swear_words
+from vshaurme.forms.validators import password_validators
 
 
 class LoginForm(FlaskForm):
@@ -33,7 +34,10 @@ class RegisterForm(FlaskForm):
     email = StringField(_l('Email'), validators=[DataRequired(), Length(1, 254), Email()])
     username = StringField(_l('Username'), validators=[InputRequired(), Length(1, 20), Regexp('^[a-zA-Z0-9]*$', message=_l('The username should contain only a-z, A-Z and 0-9.')), is_bad_username])
     password = PasswordField(_l('Password'), validators=[
-        DataRequired(), Length(8, 128), EqualTo(_l('password2'))])
+                DataRequired(), 
+                EqualTo('password2', _l('Entered passwords do not match')), 
+                *password_validators
+                ])
     password2 = PasswordField(_l('Confirm password'), validators=[DataRequired()])
     submit = SubmitField(_l('Submit'))
 
@@ -44,7 +48,7 @@ class RegisterForm(FlaskForm):
     def validate_username(self, field):
         if User.query.filter_by(username=field.data).first():
             raise ValidationError(_l('The username is already in use.'))
-
+    
 
 class ForgetPasswordForm(FlaskForm):
     email = StringField(_l('Email'), validators=[DataRequired(), Length(1, 254), Email()])

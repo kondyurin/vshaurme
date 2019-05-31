@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo, Optional, R
 from flask_babel import lazy_gettext as _l
 
 from vshaurme.models import User
-
+from vshaurme.forms.validators import password_validators
 
 class EditProfileForm(FlaskForm):
     name = StringField(_l('Name'), validators=[DataRequired(), Length(1, 30)])
@@ -51,7 +51,10 @@ class ChangeEmailForm(FlaskForm):
 class ChangePasswordForm(FlaskForm):
     old_password = PasswordField(_l('Old Password'), validators=[DataRequired()])
     password = PasswordField(_l('New Password'), validators=[
-        DataRequired(), Length(8, 128), EqualTo('password2')])
+                DataRequired(), 
+                EqualTo('password2', _l('Entered passwords do not match')), 
+                *password_validators
+                ])
     password2 = PasswordField(_l('Confirm Password'), validators=[DataRequired()])
     submit = SubmitField(_l('Submit'))
 

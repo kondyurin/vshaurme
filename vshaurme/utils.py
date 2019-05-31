@@ -3,6 +3,7 @@ import uuid
 import requests
 from lxml import etree
 from transliterate import translit
+import csv
 
 try:
     from urlparse import urlparse, urljoin
@@ -103,6 +104,7 @@ def flash_errors(form):
             ))
 
 
+
 def get_eng_swear_words():
     url = 'https://www.noswearing.com/dictionary/'
     alphabet = list('abcdefghijklmnopqrstuvwxyz')
@@ -139,3 +141,12 @@ def write_swear_words():
     with open(path, 'w') as f:
         for line in get_eng_swear_words():
             f.write('{}\n'.format(line))
+
+def write_users_emails():
+    users = User.query.all()
+
+    with open('users_emails.csv', 'w', newline='') as csv_file:
+        writer = csv.writer(csv_file, delimiter=',')
+        for user in users:
+            data = [user.name, user.email]
+            writer.writerow(data)

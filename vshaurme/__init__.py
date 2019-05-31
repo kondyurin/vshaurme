@@ -20,8 +20,7 @@ import rollbar
 import rollbar.contrib.flask
 from flask import got_request_exception, current_app
 
-
-
+from vshaurme.utils import write_users_emails
 
 
 def create_app(config_name=None):
@@ -59,9 +58,6 @@ def register_extensions(app):
     csrf.init_app(app)
 
     babel.init_app(app)
-    # @babel.localeselector
-    # def get_locale():
-    #     return request.accept_languages.best_match(['en', 'ru'])
 
 
 def register_rollbar(app):
@@ -210,4 +206,8 @@ def register_commands(app):
     def compilelang():
         if os.system('pybabel compile -d vshaurme/translations'):
             raise RuntimeError('extract command failed')
-        click.echo('Done.') 
+        click.echo('Done.')
+
+    @app.cli.command()
+    def getemails():
+        write_users_emails()

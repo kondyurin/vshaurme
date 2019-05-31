@@ -33,7 +33,6 @@ def index():
 @admin_bp.route('/profile/<int:user_id>', methods=['GET', 'POST'])
 @login_required
 @admin_required
-@permission_required('MODERATE')
 def edit_profile_admin(user_id):
     user = User.query.get_or_404(user_id)
     form = EditProfileAdminForm(user=user)

@@ -31,7 +31,7 @@ def fake_user(count=10):
         user = User(name=fake.first_name(),
                     confirmed=True,
                     username=fake.user_name(),
-                    bio = 'My name is',
+                    bio = fake.job(),
                     location=fake.city(),
                     website=fake.url(),
                     email=fake.ascii_free_email())

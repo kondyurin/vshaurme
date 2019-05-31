@@ -115,3 +115,4 @@ uploads/avatars/*
 whooshee
 .vscode/
 .DS_Store
+users_emails.csv
