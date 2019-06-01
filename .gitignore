@@ -108,6 +108,7 @@ venv.bak/
 .idea
 uploads/*
 !uploads/.gitkeep
+!uploads/swear_words.txt
 !uploads/avatars
 uploads/avatars/*
 !uploads/avatars/.gitkeep
