@@ -161,7 +161,6 @@ def register_commands(app):
         """Generate fake data."""
 
         from vshaurme.fakes import fake_admin, fake_comment, fake_follow, fake_photo, fake_tag, fake_user, fake_collect
-        from vshaurme.utils import write_swear_words
 
         db.drop_all()
         db.create_all()
@@ -182,8 +181,6 @@ def register_commands(app):
         fake_collect(collect)
         click.echo('Generating %d comments...' % comment)
         fake_comment(comment)
-        click.echo('Parse list of swear words...')
-        write_swear_words()
         click.echo('Done.')
 
     @app.cli.command()
