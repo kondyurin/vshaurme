@@ -1,12 +1,10 @@
 import os
 import uuid
 import requests
-<<<<<<< HEAD
+
 from lxml import etree
 from transliterate import translit
 import csv
-=======
->>>>>>> Delete parsing process, integrate with API
 
 try:
     from urlparse import urlparse, urljoin
@@ -105,3 +103,12 @@ def flash_errors(form):
                 getattr(form, field).label.text,
                 error
             ))
+
+def write_users_emails():
+    users = User.query.all()
+
+    with open('users_emails.csv', 'w', newline='') as csv_file:
+        writer = csv.writer(csv_file, delimiter=',')
+        for user in users:
+            data = [user.name, user.email]
+            writer.writerow(data)
