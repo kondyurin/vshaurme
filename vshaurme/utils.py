@@ -104,6 +104,7 @@ def flash_errors(form):
                 error
             ))
 
+
 def write_users_emails():
     users = User.query.all()
 
