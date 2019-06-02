@@ -2,6 +2,10 @@ import os
 import uuid
 import requests
 
+from lxml import etree
+from transliterate import translit
+import csv
+
 try:
     from urlparse import urlparse, urljoin
 except ImportError:
