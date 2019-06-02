@@ -20,7 +20,7 @@ import rollbar
 import rollbar.contrib.flask
 from flask import got_request_exception, current_app
 
-from vshaurme.utils import write_users_emails
+from vshaurme.utils import write_users_emails_to_csv
 
 
 def create_app(config_name=None):
@@ -206,5 +206,6 @@ def register_commands(app):
         click.echo('Done.')
 
     @app.cli.command()
-    def getemails():
-        write_users_emails()
+    @click.option('--csv_name', help='Name for output file', default='users_emails.csv')
+    def getemails(csv_name):
+        write_users_emails_to_csv(csv_name)

@@ -105,10 +105,10 @@ def flash_errors(form):
             ))
 
 
-def write_users_emails():
+def write_users_emails_to_csv(csv_output):
     users = User.query.all()
 
-    with open('users_emails.csv', 'w', newline='') as csv_file:
+    with open(csv_output, 'w', newline='') as csv_file:
         writer = csv.writer(csv_file, delimiter=',')
         for user in users:
             data = [user.name, user.email]
