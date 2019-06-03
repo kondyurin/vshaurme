@@ -8,8 +8,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo, Regexp, Inp
 from flask_babel import lazy_gettext as _l
 
 from vshaurme.models import User
-from vshaurme.validators import is_bad_username
-from vshaurme.forms.validators import password_validators
+from vshaurme.validators import is_bad_username, password_validators
 
 class LoginForm(FlaskForm):
     email = StringField(_l('Email'), validators=[DataRequired(), Length(1, 254), Email()])

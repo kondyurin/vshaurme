@@ -1,7 +1,9 @@
 import os
+import re
 import requests
 
 from flask import current_app
+from flask_babel import _
 from flask_babel import lazy_gettext as _l
 
 from wtforms import ValidationError
@@ -9,28 +11,48 @@ from wtforms import ValidationError
 from transliterate import translit
 
 
-def get_word_swear_level(word, lang):
-    payload = {
-            'txt': '{}'.format(word),
-            'lang': lang
-    }
-    url = "https://tt-api.tech/1.0/profanity"
-    headers = {'authorization': 'Token {}'.format(current_app.config['TT_API_TOKEN'])}
-    response = requests.get(url, params=payload, headers=headers)
-    data = response.json()
-    swear_level = data['result']['level']
-    return swear_level
-
-
 def is_bad_username(self, field):
-    langs = ['rus', 'eng']
+    for word in read_swear_words():
+        if word.strip() in field.data:
+            raise ValidationError(_l("Please don't use swear words in username"))
+
+
+def read_swear_words():
     path = current_app.config['SWEAR_WORDS']
     if os.path.getsize(path) > 0:
         with open(path, 'r') as f:
-            for word in f:
-                if word.strip() in field.data:
-                    raise ValidationError(_l("Please don't use swear words in username"))
-    translit_word = translit(field.data, 'ru')
-    for lang in langs:
-        if get_word_swear_level(translit_word, lang) > 0:
-            raise ValidationError(_l("Please don't use swear words in username"))
+            swear_words = [line for line in f]
+    return swear_words
+
+
+def has_upper_letter(form, field):
+    password = field.data
+    pattern = r'[A-Z]'
+    if not re.search(pattern, password):
+        raise ValidationError(_('Password should contain at least 1 capital letter'))
+
+
+def has_lower_letter(form, field):
+    password = field.data
+    pattern = r'[a-z]'
+    if not re.search(pattern, password):
+        raise ValidationError(_('Password should contain at least 1 lowercase letter'))
+
+
+def has_digit(form, field):
+    password = field.data
+    pattern = r'\d'
+    if not re.search(pattern, password):
+        raise ValidationError(_('Password should contain at least 1 digit'))
+
+
+
+def is_long_enought(form, field):
+    min_lenght = 10
+    message = _('Password should be not less then %d symbols') % (min_lenght)
+    l = field.data and len(field.data) or 0
+    if l < min_lenght:
+        raise ValidationError(message)
+
+
+password_validators = [has_upper_letter, has_lower_letter, has_digit, is_long_enought]
