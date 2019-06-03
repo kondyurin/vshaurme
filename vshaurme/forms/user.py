@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo, Optional, R
 from flask_babel import lazy_gettext as _l
 
 from vshaurme.models import User
-from vshaurme.forms.validators import password_validators
+from vshaurme.validators import password_validators
 
 class EditProfileForm(FlaskForm):
     name = StringField(_l('Name'), validators=[DataRequired(), Length(1, 30)])
