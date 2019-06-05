@@ -1,9 +1,11 @@
 import os
 import sys
 
+from dotenv import load_dotenv
 from flask_babel import lazy_gettext as _l
 
 basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+load_dotenv(os.path.join(basedir, '.env'))
 
 # SQLite URI compatible
 WIN = sys.platform.startswith('win')
@@ -50,8 +52,8 @@ class BaseConfig:
     AVATARS_SIZE_TUPLE = (30, 100, 200)
 
     MAIL_SERVER = os.getenv('MAIL_SERVER')
-    MAIL_PORT = 465
-    MAIL_USE_SSL = True
+    MAIL_PORT = int(os.getenv('MAIL_PORT') or 465)
+    MAIL_USE_TLS = os.getenv('MAIL_USE_TLS') is not None
     MAIL_USERNAME = os.getenv('MAIL_USERNAME')
     MAIL_PASSWORD = os.getenv('MAIL_PASSWORD')
     MAIL_DEFAULT_SENDER = ('Vshaurme Admin', MAIL_USERNAME)
