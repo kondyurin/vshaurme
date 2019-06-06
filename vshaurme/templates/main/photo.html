@@ -2,6 +2,12 @@
 {% from 'bootstrap/pagination.html' import render_pagination %}
 {% from 'bootstrap/form.html' import render_form, render_field %}
 
+{% block head %}
+{{ super() }}
+<script src="{{ url_for('static', filename='js/es5-shims.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/share.js') }}"></script>
+{% endblock %}
+
 {% block title %}{{ photo.author.name }}{{ _("'s Photo") }}{% endblock %}
 
 {% block content %}
@@ -37,7 +43,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="shareModalLabel">Permalink</h5>
+                    <h5 class="modal-title" id="shareModalLabel">{{ _('Permalink') }}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="{{ _('Close') }}">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -46,6 +52,7 @@
                     <input class="form-control" value="{{ url_for('.show_photo', photo_id=photo.id, _external=True) }}"
                            readonly>
                 </div>
+                <div class="modal-footer justify-content-start ya-share2"  data-services="vkontakte,facebook,twitter,viber,whatsapp,telegram" data-counter=""></div>
             </div>
         </div>
     </div>
