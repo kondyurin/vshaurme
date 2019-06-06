@@ -7,20 +7,17 @@ from flask_babel import lazy_gettext as _l
 from vshaurme.extensions import mail
 
 
-# def _send_async_mail(app, message):
-#     with app.app_context():
-#         mail.send(message)
+def send_async_email(app, msg):
+    with app.app_context():
+        mail.send(msg)
 
 
 def send_mail(to, subject, template, **kwargs):
-    message = Message(subject, recipients=[to])
-    message.body = render_template(template + '.txt', **kwargs)
-    message.html = render_template(template + '.html', **kwargs)
+    msg = Message(subject, recipients=[to])
+    msg.body = render_template(template + '.txt', **kwargs)
+    msg.html = render_template(template + '.html', **kwargs)
     app = current_app._get_current_object()
-    mail.send(message)
-    # thr = Thread(target=_send_async_mail, args=[app, message])
-    # thr.start()
-    # return thr
+    Thread(target=send_async_email, args=(app, msg)).start()
 
 
 def send_confirm_email(user, token, to=None):

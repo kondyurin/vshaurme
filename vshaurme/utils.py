@@ -25,7 +25,7 @@ def generate_token(user, operation, expire_in=None, **kwargs):
 
     data = {'id': user.id, 'operation': operation}
     data.update(**kwargs)
-    return s.dumps(data)
+    return s.dumps(data).decode('utf-8')
 
 
 def validate_token(user, token, operation, new_password=None):

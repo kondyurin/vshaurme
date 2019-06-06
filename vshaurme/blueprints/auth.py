@@ -63,7 +63,7 @@ def register():
         email = form.email.data.lower()
         username = form.username.data
         password = form.password.data
-        user = User(name=name, email=email, username=username, confirmed=True)
+        user = User(name=name, email=email, username=username)
         user.set_password(password)
         db.session.add(user)
         db.session.commit()
