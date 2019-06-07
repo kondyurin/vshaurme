@@ -63,8 +63,8 @@
                               class="{% if notification_count == 0 %}hide{% endif %} badge badge-danger badge-notification"
                               data-href="{{ url_for('ajax.notifications_count') }}">{{ notification_count }}</span>
                     </a>
-                    <a class="nav-item nav-link" href="{{ url_for('main.upload') }}" title="{{_('Upload')}}">
-                        <span class="oi oi-cloud-upload"></span>&nbsp;&nbsp;
+                    <a class="nav-item nav-link" href="{{ url_for('main.upload') }}" title="{{_('Upload')}}" onclick="ym(51694414, 'reachGoal', 'TARGET_UPLOAD_PHOTO'); return true;">
+                        <span class="oi oi-cloud-upload" ></span>&nbsp;&nbsp;
                     </a>
                     <div class="dropdown nav-item">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
