@@ -108,7 +108,8 @@
                     <div class="comment-form" id="comment-form">
                         {{ render_form(comment_form, action=url_for('.new_comment', photo_id=photo.id, page=pagination.pages or 1,
                         reply=request.args.get('reply')),
-                        extra_classes="text-right") }}
+                        extra_classes="text-right",
+                        render_kw={'onsubmit':"ym(51713743, 'reachGoal', 'TARGET_COMMENT'); return true;"}) }}
                     </div>
                 </div>
             {% else %}
