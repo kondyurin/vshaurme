@@ -80,7 +80,10 @@ class BaseConfig:
     SWEAR_WORDS = os.path.join(basedir, 'uploads', 'swear_words.txt')
 
     TT_API_TOKEN = 'vBfk5iOxKrS2ppHrdmWnmPhNl2bz9cJCJ3X'
-    
+
+    RECAPTCHA_PUBLIC_KEY = '6Lev2KcUAAAAAOhO0BQlaCGG24Bk0BadDis-BMsD' 
+    RECAPTCHA_PRIVATE_KEY = os.getenv('RECAPTCHA_SECRET_KEY')
+
 
 class DevelopmentConfig(BaseConfig):
     SQLALCHEMY_DATABASE_URI = \
