@@ -1,6 +1,6 @@
 # VShaurme
 
-[alpden.pythonanywhere.com](http://alpden.pythonanywhere.com)
+[rbatonov.pythonanywhere.com](http://rbatonov.pythonanywhere.com)
 
 ## Как установить локально
 
