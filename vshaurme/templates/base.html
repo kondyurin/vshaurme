@@ -14,6 +14,21 @@
             <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         {% endblock styles %}
     {% endblock head %}
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(53968864, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/53968864" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -48,8 +63,8 @@
                               class="{% if notification_count == 0 %}hide{% endif %} badge badge-danger badge-notification"
                               data-href="{{ url_for('ajax.notifications_count') }}">{{ notification_count }}</span>
                     </a>
-                    <a class="nav-item nav-link" href="{{ url_for('main.upload') }}" title="{{_('Upload')}}">
-                        <span class="oi oi-cloud-upload"></span>&nbsp;&nbsp;
+                    <a class="nav-item nav-link" href="{{ url_for('main.upload') }}" title="{{_('Upload')}}" onclick="ym(51694414, 'reachGoal', 'TARGET_UPLOAD_PHOTO'); return true;">
+                        <span class="oi oi-cloud-upload" ></span>&nbsp;&nbsp;
                     </a>
                     <div class="dropdown nav-item">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
@@ -79,7 +94,7 @@
                     </div>
                 {% else %}
                     <a class="btn btn-outline-primary" href="{{ url_for('auth.login') }}">{{_('Login')}}</a>&nbsp;&nbsp;
-                    <a class="btn btn-primary" href="{{ url_for('auth.register') }}">{{_('Join Vshaurme')}}</a>
+                    <a class="btn btn-primary" href="{{ url_for('auth.register') }}" onclick="ym(53968864, 'reachGoal', 'TARGET_REGISTRATION'); return true;">{{_('Join Vshaurme')}}</a>
                 {% endif %}
                 </div>
             </div>
@@ -128,6 +143,7 @@
             var is_authenticated = false;
         {% endif %}
     </script>
+    <script>setTimeout("ym(51697399, 'reachGoal', 'TARGET_TIME')", 180000);</script>
 {% endblock %}
 </body>
 </html>
