@@ -7,33 +7,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-06-05 10:15+0300\n"
+"POT-Creation-Date: 2019-06-13 12:39+0300\n"
 "PO-Revision-Date: 2019-06-05 10:17+0300\n"
 "Last-Translator: \n"
 "Language: ru\n"
 "Language-Team: ru <LL@li.org>\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
-"X-Generator: Poedit 2.2.1\n"
 
 #: vshaurme/decorators.py:13
 #, python-format
-msgid "Please confirm your account first.Not receive the email?<a class=\"alert-link\" href=\"%s\">Resend Confirm Email</a>"
-msgstr "Пожалуйста, сначала подтвердите ваш аккаунт. Не получили запрос по почте?<a class=\"alert-link\" href=\"%s\">Оправить на почту еще раз</a>"
+msgid ""
+"Please confirm your account first.Not receive the email?<a class=\"alert-"
+"link\" href=\"%s\">Resend Confirm Email</a>"
+msgstr ""
+"Пожалуйста, сначала подтвердите ваш аккаунт. Не получили запрос по "
+"почте?<a class=\"alert-link\" href=\"%s\">Оправить на почту еще раз</a>"
 
-#: vshaurme/emails.py:16
+#: vshaurme/emails.py:24
 msgid "Email Confirm"
 msgstr "Письмо подтверждения"
 
-#: vshaurme/emails.py:20 vshaurme/templates/auth/reset_password.html:4
+#: vshaurme/emails.py:28 vshaurme/templates/auth/reset_password.html:4
 #: vshaurme/templates/auth/reset_password.html:8
 msgid "Password Reset"
 msgstr "Сброс пароля"
 
-#: vshaurme/emails.py:24
+#: vshaurme/emails.py:32
 msgid "Change Email Confirm"
 msgstr "Подтверждение на изменение пароля"
 
@@ -52,31 +56,33 @@ msgstr "<a href=\"%s#comments\">К этому фото</a> появился но
 msgid "User <a href=\"%s\">%s</a> collected your <a href=\"%s\">photo</a>"
 msgstr "Пользователь <a href=\"%s\">%s</a> добавил ваше <a href=\"%s\">фото</a>"
 
-#: vshaurme/settings.py:68
+#: vshaurme/settings.py:70
 msgid "Drop files here to upload"
 msgstr "Перетащите файл сюда для загрузки"
 
-#: vshaurme/settings.py:69
+#: vshaurme/settings.py:71
 msgid "You can't upload files of this type."
 msgstr "Вы не можете загрузить фал этого типа"
 
-#: vshaurme/settings.py:70
+#: vshaurme/settings.py:72
 msgid "File is too big {{filesize}}. Max filesize: {{maxFilesize}}MiB."
-msgstr "Файл слишком большой {{filesize}}. Максимальный размер файла: {{maxFilesize}}MiB."
+msgstr ""
+"Файл слишком большой {{filesize}}. Максимальный размер файла: "
+"{{maxFilesize}}MiB."
 
-#: vshaurme/settings.py:71
+#: vshaurme/settings.py:73
 msgid "Server error: {{statusCode}}"
 msgstr "Ошибка сервера: {{statusCode}}"
 
-#: vshaurme/settings.py:72
+#: vshaurme/settings.py:74
 msgid "Your browser does not support drag'n'drop file uploads."
 msgstr "Ваш браузер слишком старый для этого де**ма"
 
-#: vshaurme/settings.py:73
+#: vshaurme/settings.py:75
 msgid "Your can't upload any more files."
 msgstr "Вы не можете загрузить больше файлов"
 
-#: vshaurme/utils.py:102
+#: vshaurme/utils.py:99
 #, python-format
 msgid "Error in the %s field - %s"
 msgstr "Ошибка в %s поле - %s"
@@ -126,7 +132,7 @@ msgstr "Учетная запись заблокирована."
 msgid "Lock canceled."
 msgstr "Блокировка отменена."
 
-#: vshaurme/blueprints/admin.py:120 vshaurme/blueprints/main.py:395
+#: vshaurme/blueprints/admin.py:120 vshaurme/blueprints/main.py:407
 msgid "Tag deleted."
 msgstr "Тег удален."
 
@@ -178,83 +184,83 @@ msgstr "Пароль обновлен."
 msgid "Invalid or expired link."
 msgstr "Неверная ссылка, либо время жизни ссылки истекло."
 
-#: vshaurme/blueprints/main.py:47
+#: vshaurme/blueprints/main.py:59
 msgid "Enter keyword about photo, user or tag."
 msgstr "Введите ключевое слово фото, пользователя или тег."
 
-#: vshaurme/blueprints/main.py:87
+#: vshaurme/blueprints/main.py:99
 msgid "Notification archived."
 msgstr "Уведомление заархивировано."
 
-#: vshaurme/blueprints/main.py:97
+#: vshaurme/blueprints/main.py:109
 msgid "All notifications archived."
 msgstr "Все уведомления заархивированы."
 
-#: vshaurme/blueprints/main.py:157
+#: vshaurme/blueprints/main.py:169
 msgid "This is already the last one."
 msgstr "Это уже последнее фото."
 
-#: vshaurme/blueprints/main.py:168
+#: vshaurme/blueprints/main.py:180
 msgid "This is already the first one."
 msgstr "Это фото уже первое."
 
-#: vshaurme/blueprints/main.py:180
+#: vshaurme/blueprints/main.py:192
 msgid "Already collected."
 msgstr "Уже получено."
 
-#: vshaurme/blueprints/main.py:184
+#: vshaurme/blueprints/main.py:196
 msgid "Photo collected."
 msgstr "Фото получено."
 
-#: vshaurme/blueprints/main.py:195
+#: vshaurme/blueprints/main.py:207
 msgid "Not collect yet."
 msgstr "Еще не получено."
 
-#: vshaurme/blueprints/main.py:199
+#: vshaurme/blueprints/main.py:211
 msgid "Photo uncollected."
 msgstr "Фото не получено."
 
-#: vshaurme/blueprints/main.py:210
+#: vshaurme/blueprints/main.py:222
 msgid "Comment reported."
 msgstr "Комментарий отправлен."
 
-#: vshaurme/blueprints/main.py:221
+#: vshaurme/blueprints/main.py:233
 msgid "Photo reported."
 msgstr "Фото отправлено."
 
-#: vshaurme/blueprints/main.py:246
+#: vshaurme/blueprints/main.py:258
 msgid "Description updated."
 msgstr "Описание обновлено."
 
-#: vshaurme/blueprints/main.py:272
+#: vshaurme/blueprints/main.py:284
 msgid "Comment published."
 msgstr "Комментарий опубликован."
 
-#: vshaurme/blueprints/main.py:299
+#: vshaurme/blueprints/main.py:311
 msgid "Tag added."
 msgstr "Тег добавлен."
 
-#: vshaurme/blueprints/main.py:314
+#: vshaurme/blueprints/main.py:326
 msgid "Comment disabled"
 msgstr "Комментарий выключен."
 
-#: vshaurme/blueprints/main.py:317
+#: vshaurme/blueprints/main.py:329
 msgid "Comment enabled."
 msgstr "Комментарий включен."
 
-#: vshaurme/blueprints/main.py:341
+#: vshaurme/blueprints/main.py:353
 msgid "Photo deleted."
 msgstr "Фото удалено."
 
-#: vshaurme/blueprints/main.py:361
+#: vshaurme/blueprints/main.py:373
 msgid "Comment deleted."
 msgstr "Комментарий удален."
 
-#: vshaurme/blueprints/main.py:371
+#: vshaurme/blueprints/main.py:383
 msgid "time"
 msgstr "времени"
 
-#: vshaurme/blueprints/main.py:377 vshaurme/templates/main/tag.html:24
+#: vshaurme/blueprints/main.py:389 vshaurme/templates/main/tag.html:24
 msgid "collects"
 msgstr "коллекциям"
 
@@ -306,9 +312,9 @@ msgstr "Настройки конфиденциальности обновлен
 msgid "Your are free, goodbye!"
 msgstr "Добби свободен, до свидания!"
 
-#: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:14
-#: vshaurme/forms/auth.py:22 vshaurme/forms/auth.py:42
-#: vshaurme/forms/auth.py:47 vshaurme/templates/admin/manage_user.html:101
+#: vshaurme/forms/admin.py:11 vshaurme/forms/auth.py:15
+#: vshaurme/forms/auth.py:23 vshaurme/forms/auth.py:44
+#: vshaurme/forms/auth.py:49 vshaurme/templates/admin/manage_user.html:101
 #: vshaurme/templates/user/_header.html:56
 msgid "Email"
 msgstr "Почта"
@@ -325,8 +331,8 @@ msgstr "Активность"
 msgid "Confirmed"
 msgstr "Подтвержденный"
 
-#: vshaurme/forms/admin.py:15 vshaurme/forms/auth.py:30
-#: vshaurme/forms/auth.py:43 vshaurme/forms/auth.py:51 vshaurme/forms/main.py:8
+#: vshaurme/forms/admin.py:15 vshaurme/forms/auth.py:32
+#: vshaurme/forms/auth.py:45 vshaurme/forms/auth.py:53 vshaurme/forms/main.py:8
 #: vshaurme/forms/main.py:13 vshaurme/forms/main.py:18
 #: vshaurme/forms/user.py:19 vshaurme/forms/user.py:31
 #: vshaurme/forms/user.py:44 vshaurme/forms/user.py:59
@@ -335,52 +341,52 @@ msgstr "Подтвержденный"
 msgid "Submit"
 msgstr "Отправить"
 
-#: vshaurme/forms/admin.py:25 vshaurme/forms/auth.py:38
+#: vshaurme/forms/admin.py:25 vshaurme/forms/auth.py:40
 #: vshaurme/forms/user.py:23
 msgid "The username is already in use."
 msgstr "Имя пользователя уже используется"
 
-#: vshaurme/forms/admin.py:29 vshaurme/forms/auth.py:34
+#: vshaurme/forms/admin.py:29 vshaurme/forms/auth.py:36
 #: vshaurme/forms/user.py:48
 msgid "The email is already in use."
 msgstr "Почта уже используется"
 
-#: vshaurme/forms/auth.py:15 vshaurme/forms/auth.py:24
-#: vshaurme/forms/auth.py:48
+#: vshaurme/forms/auth.py:16 vshaurme/forms/auth.py:25
+#: vshaurme/forms/auth.py:50
 msgid "Password"
 msgstr "Пароль"
 
-#: vshaurme/forms/auth.py:16
+#: vshaurme/forms/auth.py:17
 msgid "Remember me"
 msgstr "Запомнить меня"
 
-#: vshaurme/forms/auth.py:17
+#: vshaurme/forms/auth.py:18
 msgid "Log in"
 msgstr "Авторизоваться"
 
-#: vshaurme/forms/auth.py:21 vshaurme/forms/user.py:12
+#: vshaurme/forms/auth.py:22 vshaurme/forms/user.py:12
 #: vshaurme/templates/admin/manage_tag.html:23
 msgid "Name"
 msgstr "Имя"
 
-#: vshaurme/forms/auth.py:23 vshaurme/forms/user.py:13
+#: vshaurme/forms/auth.py:24 vshaurme/forms/user.py:13
 #: vshaurme/forms/user.py:75
 msgid "Username"
 msgstr "Имя пользователя"
 
-#: vshaurme/forms/auth.py:23 vshaurme/forms/user.py:15
+#: vshaurme/forms/auth.py:24 vshaurme/forms/user.py:15
 msgid "The username should contain only a-z, A-Z and 0-9."
 msgstr "Имя пользователя должно. Содержать только  буквы a-z, A-Z и цифры 0-9."
 
-#: vshaurme/forms/auth.py:26 vshaurme/forms/user.py:55
+#: vshaurme/forms/auth.py:27 vshaurme/forms/user.py:55
 msgid "Entered passwords do not match"
 msgstr "Введенные пароли не совпадают"
 
-#: vshaurme/forms/auth.py:29 vshaurme/forms/auth.py:50
+#: vshaurme/forms/auth.py:30 vshaurme/forms/auth.py:52
 msgid "Confirm password"
 msgstr "Подтвердить пароль"
 
-#: vshaurme/forms/auth.py:49
+#: vshaurme/forms/auth.py:51
 msgid "password2"
 msgstr ""
 
@@ -404,7 +410,7 @@ msgstr "Город"
 msgid "Bio"
 msgstr "Био"
 
-#: vshaurme/forms/user.py:27 vshaurme/templates/base.html:51
+#: vshaurme/forms/user.py:27 vshaurme/templates/base.html:67
 #: vshaurme/templates/main/upload.html:3 vshaurme/templates/main/upload.html:13
 #: vshaurme/templates/user/index.html:19
 msgid "Upload"
@@ -462,51 +468,55 @@ msgstr "Неверное имя пользователя"
 msgid "VShaurme"
 msgstr "ВШаурме"
 
-#: vshaurme/templates/base.html:33 vshaurme/templates/main/index.html:5
+#: vshaurme/templates/base.html:48 vshaurme/templates/main/index.html:5
 msgid "Home"
 msgstr "Домой"
 
-#: vshaurme/templates/base.html:34 vshaurme/templates/main/explore.html:4
-#: vshaurme/templates/main/index.html:77 vshaurme/templates/user/index.html:21
+#: vshaurme/templates/base.html:49 vshaurme/templates/main/index.html:77
+#: vshaurme/templates/user/index.html:21
 msgid "Explore"
 msgstr "Изучить"
 
-#: vshaurme/templates/base.html:36
+#: vshaurme/templates/base.html:50
+msgid "Trends"
+msgstr "Популярное"
+
+#: vshaurme/templates/base.html:52
 msgid "Photo, tag or user"
 msgstr "Фото, тэг или пользователь"
 
-#: vshaurme/templates/admin/index.html:39 vshaurme/templates/base.html:62
+#: vshaurme/templates/admin/index.html:39 vshaurme/templates/base.html:78
 msgid "Logged in as"
 msgstr "Вошел как"
 
-#: vshaurme/templates/admin/index.html:41 vshaurme/templates/base.html:64
+#: vshaurme/templates/admin/index.html:41 vshaurme/templates/base.html:80
 msgid "My Home"
 msgstr "Домой"
 
-#: vshaurme/templates/admin/index.html:45 vshaurme/templates/base.html:68
+#: vshaurme/templates/admin/index.html:45 vshaurme/templates/base.html:84
 #: vshaurme/templates/main/notifications.html:28
 #: vshaurme/templates/user/settings/base.html:7
 msgid "Settings"
 msgstr "Настройки "
 
-#: vshaurme/templates/admin/index.html:4 vshaurme/templates/base.html:72
+#: vshaurme/templates/admin/index.html:4 vshaurme/templates/base.html:88
 msgid "Dashboard"
 msgstr "Дашборд"
 
-#: vshaurme/templates/admin/index.html:48 vshaurme/templates/base.html:76
+#: vshaurme/templates/admin/index.html:48 vshaurme/templates/base.html:92
 msgid "Logout"
 msgstr "Выйти"
 
-#: vshaurme/templates/auth/login.html:4 vshaurme/templates/base.html:81
-#: vshaurme/templates/main/_comment.html:121
+#: vshaurme/templates/auth/login.html:4 vshaurme/templates/base.html:97
+#: vshaurme/templates/main/_comment.html:122
 msgid "Login"
 msgstr "Авторизация"
 
-#: vshaurme/templates/base.html:82
+#: vshaurme/templates/base.html:98
 msgid "Join Vshaurme"
 msgstr "Зарегистрироваться"
 
-#: vshaurme/templates/base.html:108
+#: vshaurme/templates/base.html:124
 msgid "Capture and share every wonderful moment."
 msgstr "Запечатлеть и поделиться каждым чудесным моментом."
 
@@ -824,7 +834,7 @@ msgid "Forget password"
 msgstr "Забыли пароль?"
 
 #: vshaurme/templates/auth/register.html:4
-#: vshaurme/templates/main/_comment.html:123
+#: vshaurme/templates/main/_comment.html:124
 msgid "Register"
 msgstr "Регистрация"
 
@@ -935,19 +945,19 @@ msgstr "Ответить"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: vshaurme/templates/main/_comment.html:116
+#: vshaurme/templates/main/_comment.html:117
 msgid "No permission."
 msgstr "Не разрешено"
 
-#: vshaurme/templates/main/_comment.html:122
+#: vshaurme/templates/main/_comment.html:123
 msgid "or"
 msgstr "или"
 
-#: vshaurme/templates/main/_comment.html:123
+#: vshaurme/templates/main/_comment.html:124
 msgid "to leave a comment."
 msgstr "чтобы оставить комментарий"
 
-#: vshaurme/templates/main/_comment.html:128
+#: vshaurme/templates/main/_comment.html:129
 msgid "Comment disabled."
 msgstr "Комментирование отключено"
 
@@ -998,7 +1008,7 @@ msgstr "Популярные тэги"
 msgid "Collectors"
 msgstr "Коллекционеры"
 
-#: vshaurme/templates/main/explore.html:16
+#: vshaurme/templates/main/explore.html:17
 msgid "Change"
 msgstr "Изменить"
 
@@ -1164,7 +1174,9 @@ msgid "Delete Account"
 msgstr "Удалить аккаунт"
 
 #: vshaurme/templates/user/settings/change_avatar.html:17
-msgid "Your file's size must be less than 3 MB, the allowed formats are png and jpg."
+msgid ""
+"Your file's size must be less than 3 MB, the allowed formats are png and "
+"jpg."
 msgstr "Ваш  файл должен быть меньше чем 3 MB, допустимые форматы png и jpg."
 
 #: vshaurme/templates/user/settings/edit_notification.html:4
@@ -1209,3 +1221,4 @@ msgstr "Редактировать настройки конфиденциаль
 
 #~ msgid "Password should contain at least 1 lowerrcase letter"
 #~ msgstr "Пароль должен содержать минимум 1 строчную букву"
+

@@ -73,7 +73,6 @@ def fake_photo(count=30, period=None):
             timestamp = fake.date_between(start_date=f"-{period}d", end_date="today")
         else:
             timestamp = fake.date_time_this_year()
-        print(timestamp)
         photo = Photo(
             description=fake.text(),
             filename=filename,
@@ -82,7 +81,6 @@ def fake_photo(count=30, period=None):
             author=User.query.get(random.randint(1, User.query.count())),
             timestamp=timestamp
         )
-        print('Photo created')
         # tags
         for j in range(random.randint(1, 5)):
             tag = Tag.query.get(random.randint(1, Tag.query.count()))
