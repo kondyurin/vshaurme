@@ -4,6 +4,15 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
+    {% if title != 'Explore' %}
+    <div class="row">
+        <div class="col-md-12">
+            <a class="btn btn-outline-primary" href="{{ url_for('.trends', period=1) }}" role="button">За день</a>
+            <a class="btn btn-outline-primary" href="{{ url_for('.trends', period=7) }}" role="button">За неделю</a>
+            <a class="btn btn-outline-primary" href="{{ url_for('.trends', period=30) }}" role="button">За месяц</a>
+        </div>
+    </div>
+    {% endif %}
     <div class="row">
         <div class="col-md-12">
             {% for photo in photos %}
