@@ -226,6 +226,7 @@ class Photo(db.Model):
     timestamp = db.Column(db.DateTime, default=datetime.utcnow, index=True)
     can_comment = db.Column(db.Boolean, default=True)
     flag = db.Column(db.Integer, default=0)
+    archived = db.Column(db.Boolean, default=False)
     author_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     author = db.relationship('User', back_populates='photos')
