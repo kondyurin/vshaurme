@@ -183,6 +183,26 @@ def register_commands(app):
         fake_comment(comment)
         click.echo('Done.')
 
+
+    @app.cli.command()
+    @click.option('--photo', default=30, help='Quantity of photos, default is 30.')
+    @click.option('--period', default=10, help='Time period in days till today')
+    @click.option('--collect', default=50, help='Quantity of collects, default is 50.')
+    @click.option('--comment', default=100, help='Quantity of comments, default is 100.')
+    def addphotos(photo, period, collect, comment):
+        """Generate fake photos."""
+
+        from vshaurme.fakes import fake_comment, fake_photo, fake_tag, fake_collect
+
+        click.echo('Generating %d photos...' % photo)
+        fake_photo(photo, period)
+        click.echo('Generating %d collects...' % collect)
+        fake_collect(collect, period)
+        click.echo('Generating %d comments...' % comment)
+        fake_comment(comment, period)
+        click.echo('Done.')
+
+
     @app.cli.command()
     def updatelang():
         """Update all languages."""

@@ -1,9 +1,11 @@
 import os
+import datetime
 
 from flask import render_template, flash, redirect, url_for, current_app, \
     send_from_directory, request, abort, Blueprint
 from flask_login import login_required, current_user
 from sqlalchemy.sql.expression import func
+from sqlalchemy import desc
 from flask_babel import _, lazy_gettext as _l
 
 from vshaurme.decorators import confirm_required, permission_required
@@ -37,7 +39,17 @@ def index():
 @main_bp.route('/explore')
 def explore():
     photos = Photo.query.order_by(func.random()).limit(12)
-    return render_template('main/explore.html', photos=photos)
+    return render_template('main/explore.html', photos=photos, title='Explore')
+
+
+@main_bp.route('/trends')
+def trends():
+    date = datetime.datetime.now() - datetime.timedelta(days=5)
+    query = db.session.query(Photo, func.count(Photo.id).label('count_photos')).\
+            outerjoin(Collect).outerjoin(Comment).\
+            group_by(Photo.id).filter(Photo.timestamp > date).order_by(desc('count_photos'))
+    photos = [i[0] for i in query.limit(12)]
+    return render_template('main/explore.html', photos=photos, title='Trends')
 
 
 @main_bp.route('/search')
