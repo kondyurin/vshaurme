@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% from 'macros.html' import photo_card with context %}
 
-{% block title %}{{ _('Explore') }}{% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
     <div class="row">
@@ -11,9 +11,11 @@
             {% endfor %}
         </div>
     </div>
+    {% if title == 'Explore' %}
     <div class="text-center">
         <a class="btn btn-primary" href="{{ url_for('.explore') }}">
             <span class="oi oi-loop-circular"></span> {{ _('Change') }}
         </a>
     </div>
+    {% endif %}
 {% endblock %}
