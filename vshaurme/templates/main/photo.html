@@ -19,12 +19,13 @@
                 </a>
             </div>
             {% if current_user == photo.author %}
-            <form class="btn btn-primary btn-sm text-white" method="post" data-href="{{ url_for('.archive_photo', photo_id=photo.id) }}">
-                <button type="submit" class="btn btn-primary">
+            <form class="inline" method="post" action="{{ url_for('.archive_photo', photo_id=photo.id) }}">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit" class="btn btn-primary btn-sm">
                     {% if photo.archived %}
-                        {{ Dearchive }}
+                    Dearchived
                     {% else %}
-                        {{ Archive }}
+                    Archived
                     {% endif %}
                 </button>
             </form>
