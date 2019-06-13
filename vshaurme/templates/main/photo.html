@@ -19,7 +19,15 @@
                 </a>
             </div>
             {% if current_user == photo.author %}
-            <a class="btn btn-primary btn-sm text-white" data-toggle="modal" data-target="#archived">{{ _('Archived') }}</a>
+            <form class="btn btn-primary btn-sm text-white" method="post" data-href="{{ url_for('.archive_photo', photo_id=photo.id) }}">
+                <button type="submit" class="btn btn-primary">
+                    {% if photo.archived %}
+                        {{ Dearchive }}
+                    {% else %}
+                        {{ Archive }}
+                    {% endif %}
+                </button>
+            </form>
             {% endif %}
             <a class="btn btn-primary btn-sm text-white" data-toggle="modal" data-target="#share-modal">{{ _('Share') }}</a>
             {% if current_user == photo.author or current_user.can('MODERATE') %}
