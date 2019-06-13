@@ -42,9 +42,11 @@ def explore():
     return render_template('main/explore.html', photos=photos, title='Explore')
 
 
-@main_bp.route('/trends')
-def trends():
-    date = datetime.datetime.now() - datetime.timedelta(days=5)
+@main_bp.route('/trends', defaults={'period': 7})
+@main_bp.route('/trends/<period>')
+def trends(period):
+    period = int(period)
+    date = datetime.datetime.now() - datetime.timedelta(days=period)
     query = db.session.query(Photo, func.count(Photo.id).label('count_photos')).\
             outerjoin(Collect).outerjoin(Comment).\
             group_by(Photo.id).filter(Photo.timestamp > date).order_by(desc('count_photos'))
