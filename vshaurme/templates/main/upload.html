@@ -1,5 +1,39 @@
 {% extends 'base.html' %}
 
+{% block head %}
+{{ super() }}
+<script src="https://vk.com/js/api/openapi.js?160" type="text/javascript"></script>
+<script type="text/javascript">
+var vkAppId = 7011048;
+    if (vkAppId) {
+        VK.init({ apiId: vkAppId });
+    }
+
+function postWall()
+    {
+        VK.Auth.login
+        (
+            function(response)
+            {
+                if (response.session)
+                {
+                    var userId = response.session.mid;
+                    VK.Api.call('wall.post',
+                    {owner_id: userId, message: '123', v:"5.95"}, function (data) {
+                        if (data.response)
+                        {
+                        alert('Запись успешно добавлена!');
+                        }
+                    });
+                }
+            },
+            8192
+        )
+    }
+        
+</script>
+{% endblock %}
+
 {% block title %}{{ _('Upload') }}{% endblock %}
 
 {% block styles %}
@@ -18,6 +52,7 @@
             <a class="btn btn-light float-right" href="{{ url_for('user.index', username=current_user.username) }}">
                 {{ _('Done') }}
             </a>
+            <a href="javascript:void(0);" onclick="postWall();">Click to authorize</a>
         </div>
     </div>
 {% endblock %}

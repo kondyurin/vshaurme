@@ -84,6 +84,8 @@ class BaseConfig:
     RECAPTCHA_PUBLIC_KEY = '6Lev2KcUAAAAAOhO0BQlaCGG24Bk0BadDis-BMsD' 
     RECAPTCHA_PRIVATE_KEY = os.getenv('RECAPTCHA_PRIVATE_KEY')
 
+    VK_CLIENT_ID = '7011048'
+    
 
 class DevelopmentConfig(BaseConfig):
     SQLALCHEMY_DATABASE_URI = \
