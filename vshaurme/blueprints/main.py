@@ -49,7 +49,7 @@ def trends(period):
     date = datetime.datetime.now() - datetime.timedelta(days=period)
     query = db.session.query(Photo, func.count(Photo.id).label('count_photos')).\
             outerjoin(Collect).outerjoin(Comment).\
-            group_by(Photo.id).filter(Photo.timestamp > date).order_by(desc('count_photos'))
+            group_by(Photo.id).filter(Photo.timestamp >= date).order_by(desc('count_photos'))
     photos = [i[0] for i in query.limit(12)]
     return render_template('main/explore.html', photos=photos, title='Trends')
 
