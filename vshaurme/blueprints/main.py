@@ -54,6 +54,26 @@ def trends(period):
     return render_template('main/explore.html', photos=photos, title='Trends')
 
 
+@main_bp.route('/archive_photo/<int:photo_id>', methods=['POST'])
+@login_required
+@confirm_required
+def archive_photo(photo_id):
+    # photo = Photo.query.get_or_404(photo_id)
+    photo = Photo.query.filter(Photo.id==photo_id).first()
+    if current_user != photo.author:
+        flash('You cannot archive this photo')
+        redirect(url_for('.index'))
+    if photo.archived:
+        photo.archived = False
+        db.session.commit()
+        flash('Photo dearchived')
+    else:
+        photo.archived = True
+        db.session.commit()
+        flash('Photo archived')
+    return redirect(url_for('.show_photo', photo_id=photo_id))
+
+
 @main_bp.route('/search')
 def search():
     q = request.args.get('q', '').strip()
