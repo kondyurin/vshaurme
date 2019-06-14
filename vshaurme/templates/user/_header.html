@@ -71,7 +71,12 @@
 </div>
 <div class="user-nav">
     <ul class="nav nav-tabs">
-        {{ render_nav_item('user.index', _('Photo'), user.photos|length, username=user.username) }}
+        {% set archive_photos = user.count_archive_photos(user) %}
+
+        {{ render_nav_item('user.index', _('Photo'), user.photos|length - archive_photos, username=user.username) }}
+        {% if user == current_user %}
+            {{ render_nav_item('user.show_archive_photo', _('Archive'), archive_photos, username=user.username) }}
+        {% endif %}
         {{ render_nav_item('user.show_collections', _('Collections'), user.collections|length, username=user.username) }}
         {{ render_nav_item('user.show_following', _('Following'), user.following.count() - 1, username=user.username) }}
         {{ render_nav_item('user.show_followers', _('Follower'), user.followers.count() - 1, username=user.username) }}

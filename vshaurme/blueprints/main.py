@@ -26,6 +26,7 @@ def index():
         pagination = Photo.query \
             .join(Follow, Follow.followed_id == Photo.author_id) \
             .filter(Follow.follower_id == current_user.id) \
+            .filter(Photo.archived == False) \
             .order_by(Photo.timestamp.desc()) \
             .paginate(page, per_page)
         photos = pagination.items
@@ -38,7 +39,7 @@ def index():
 
 @main_bp.route('/explore')
 def explore():
-    photos = Photo.query.order_by(func.random()).limit(12)
+    photos = Photo.query.filter(Photo.archived == False).order_by(func.random()).limit(12)
     return render_template('main/explore.html', photos=photos, title='Explore')
 
 
@@ -49,7 +50,9 @@ def trends(period):
     date = datetime.datetime.now() - datetime.timedelta(days=period)
     query = db.session.query(Photo, func.count(Photo.id).label('count_photos')).\
             outerjoin(Collect).outerjoin(Comment).\
-            group_by(Photo.id).filter(Photo.timestamp >= date).order_by(desc('count_photos'))
+            group_by(Photo.id).\
+            filter(Photo.timestamp >= date).filter(Photo.archived == False).\
+            order_by(desc('count_photos'))
     photos = [i[0] for i in query.limit(12)]
     return render_template('main/explore.html', photos=photos, title='Trends')
 

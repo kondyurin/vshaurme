@@ -151,6 +151,10 @@ class User(db.Model, UserMixin):
 
     def is_followed_by(self, user):
         return self.followers.filter_by(follower_id=user.id).first() is not None
+    
+    def count_archive_photos(self, user):
+        photos = user.photos
+        return len([photo for photo in photos if photo.archived == True])
 
     @property
     def followed_photos(self):
